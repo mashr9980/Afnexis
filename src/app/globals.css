@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@300;400;500&family=Fira+Code&display=swap");
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-bg: #0d1117;
+  --section-bg: #161b22;
+  --primary-accent: #00ffc3;
+  --secondary-accent: #4fd1c5;
+  --headings-text: #f0f6fc;
+  --body-text: #8b949e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--primary-bg);
+  --color-foreground: var(--section-bg);
+  --color-headings: var(--headings-text);
+  --color-text: var(--body-text);
+  --color-primary: var(--primary-accent);
+  --color-secondary: var(--secondary-accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,7 +28,86 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--body-text);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headings-text);
+  font-family: "Poppins", "Urbanist", sans-serif;
+  font-weight: 700;
+}
+
+code,
+pre {
+  font-family: "Fira Code", "Courier New", monospace;
+}
+
+/* Utility classes for the custom colors */
+.bg-primary {
+  background-color: var(--primary-bg);
+}
+
+.bg-section {
+  background-color: var(--section-bg);
+}
+
+.text-primary-accent {
+  color: var(--primary-accent);
+}
+
+.text-secondary-accent {
+  color: var(--secondary-accent);
+}
+
+.border-primary-accent {
+  border-color: var(--primary-accent);
+}
+
+.border-secondary-accent {
+  border-color: var(--secondary-accent);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-accent);
+  color: var(--primary-bg);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary-accent);
+  border: 1px solid var(--secondary-accent);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(79, 209, 197, 0.1);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--section-bg);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
