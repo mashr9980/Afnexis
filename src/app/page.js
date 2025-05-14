@@ -1,9 +1,11 @@
+"use client";
+
 import { HeroSection } from "@/components/home/hero";
 import { Navigation } from "@/components/navigation";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Navigation />
       <HeroSection
         title="Welcome to Our Platform"
@@ -22,6 +24,6 @@ export default function Home() {
           darkLineColor: "#2a2a2a",
         }}
       />
-    </>
+    </main>
   );
 }
