@@ -481,11 +481,19 @@ export default function Contact() {
               Let's collaborate to build innovative solutions that drive your
               business forward. Our team is ready to bring your vision to life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <AnimatedButton href="#contact-form" variant="primary">
+            <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row gap-4 justify-center">
+              <AnimatedButton
+                href="#contact-form"
+                variant="primary"
+                className="w-[150px]"
+              >
                 Start Your Project
               </AnimatedButton>
-              <AnimatedButton href="/services" variant="secondary">
+              <AnimatedButton
+                href="/services"
+                variant="secondary"
+                className="w-[150px]"
+              >
                 Explore Our Services
               </AnimatedButton>
             </div>

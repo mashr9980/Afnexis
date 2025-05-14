@@ -17,9 +17,9 @@ const AccordionItem = ({ title, children, isOpen, toggleAccordion }) => {
       >
         <span className="text-lg font-medium">{title}</span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-[var(--primary-accent)]" />
+          <ChevronUp className="h-5 w-5 text-[var(--primary-accent)] shrink-0" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-[var(--body-text)]" />
+          <ChevronDown className="h-5 w-5 text-[var(--body-text)] shrink-0" />
         )}
       </button>
       <AnimatePresence>
