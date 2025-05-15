@@ -27,6 +27,7 @@ import BenefitCard from "@/components/benefit-card";
 import { Input } from "@/components/ui/input";
 import CTASection from "@/components/home/cta-section";
 import FAQ from "@/components/faq";
+import CustomTabs from "@/components/custom-tabs";
 
 export default function CareersPage() {
   const heroRef = useRef(null);
@@ -200,34 +201,74 @@ export default function CareersPage() {
     },
   ];
 
-  // FAQ items
-  const faqItems = [
+  // Create tab content for each category
+  const createJobGrid = (jobList) => (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {jobList.map((job, index) => (
+        <motion.div key={job.id} variants={fadeIn} custom={index * 0.1}>
+          <JobCard job={job} />
+        </motion.div>
+      ))}
+    </div>
+  );
+
+  // Define tabs with their content
+  const jobTabs = [
     {
-      question: "What is the interview process like?",
-      answer:
-        "Our interview process typically includes an initial screening call with HR, followed by a technical assessment relevant to your role, and finally a panel interview with team members and leadership. The entire process usually takes 2-3 weeks.",
+      value: "all",
+      label: "All",
+      content: createJobGrid(filteredJobs),
     },
     {
-      question: "Do you offer relocation assistance?",
-      answer:
-        "Yes, for certain roles we offer relocation packages to help you move closer to our offices. This is determined on a case-by-case basis and will be discussed during the interview process.",
+      value: "engineering",
+      label: "Engineering",
+      content: createJobGrid(
+        filteredJobs.filter((job) => job.department === "Engineering")
+      ),
     },
     {
-      question: "What is your remote work policy?",
-      answer:
-        "We offer flexible work arrangements including fully remote, hybrid, and in-office options depending on the role and team. We believe in focusing on results rather than where the work happens.",
+      value: "design",
+      label: "Design",
+      content: createJobGrid(
+        filteredJobs.filter((job) => job.department === "Design")
+      ),
     },
     {
-      question: "How often do you promote from within?",
-      answer:
-        "Career growth is important to us. We regularly evaluate team members for advancement opportunities and have a structured career path framework. Many of our leaders started in individual contributor roles.",
+      value: "product",
+      label: "Product",
+      content: createJobGrid(
+        filteredJobs.filter((job) => job.department === "Product")
+      ),
     },
     {
-      question: "What learning and development opportunities do you provide?",
-      answer:
-        "We offer a professional development budget for each employee, regular internal workshops and knowledge sharing sessions, access to online learning platforms, and opportunities to attend industry conferences.",
+      value: "data",
+      label: "Data",
+      content: createJobGrid(
+        filteredJobs.filter((job) => job.department === "Data")
+      ),
+    },
+    {
+      value: "operations",
+      label: "Operations",
+      content: createJobGrid(
+        filteredJobs.filter((job) => job.department === "Operations")
+      ),
     },
   ];
+
+  // Show "No positions found" message if needed
+  if (filteredJobs.length === 0) {
+    jobTabs.forEach((tab) => {
+      tab.content = (
+        <div className="text-center py-12">
+          <p className="text-text text-lg">
+            No positions found matching your search. Please try different
+            keywords.
+          </p>
+        </div>
+      );
+    });
+  }
 
   return (
     <main className="min-h-screen bg-background">
@@ -383,7 +424,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section
+      {/* <section
         id="open-positions"
         ref={openingsRef}
         className="py-20 container mx-auto px-4"
@@ -532,6 +573,48 @@ export default function CareersPage() {
               </p>
             </div>
           )}
+        </motion.div>
+      </section> */}
+
+      {/* Open Positions Section */}
+      <section
+        id="open-positions"
+        ref={openingsRef}
+        className="py-20 container mx-auto px-4"
+      >
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          animate={openingsVisible ? "visible" : "hidden"}
+          variants={fadeIn}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-headings font-['Poppins'] mb-6">
+            Open Positions
+          </h2>
+          <p className="text-text max-w-3xl mx-auto mb-8">
+            Join our team of innovators and problem-solvers. Explore our current
+            openings and find your next opportunity.
+          </p>
+
+          <div className="relative max-w-md mx-auto mb-12">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text" />
+            <Input
+              type="text"
+              placeholder="Search positions..."
+              className="pl-10 bg-foreground border-none text-text focus:ring-primary-foreground"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          animate={openingsVisible ? "visible" : "hidden"}
+          variants={staggerContainer}
+        >
+          {/* Using our new CustomTabs component */}
+          <CustomTabs tabs={jobTabs} defaultValue="all" />
         </motion.div>
       </section>
 
