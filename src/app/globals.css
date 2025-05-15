@@ -45,6 +45,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --brand: hsl(266 100% 50%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 @theme inline {
@@ -88,6 +90,33 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --color-brand-foreground: var(----brand-foreground);
+  --color-brand: var(----brand);
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+/* Custom Tailwind CSS class */
+@layer utilities {
+  .container-wrapper {
+    @apply max-w-7xl mx-auto px-4;
+  }
 }
 
 body {
@@ -106,6 +135,10 @@ h6 {
   color: var(--headings-text);
   font-family: "Poppins", "Urbanist", sans-serif;
   font-weight: 700;
+}
+
+button {
+  cursor: pointer;
 }
 
 code,
@@ -207,6 +240,8 @@ pre {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --brand: hsl(266 70% 60%);
+  --brand-foreground: hsl(270 100% 98%);
 }
 
 @layer base {
@@ -216,4 +251,42 @@ pre {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Counter animation */
+.counter-value {
+  display: inline-block;
+  min-width: 2ch;
+  text-align: right;
+}
+
+/* Testimonial carousel */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.5s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.5s ease-out forwards;
 }

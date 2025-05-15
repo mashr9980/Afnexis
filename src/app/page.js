@@ -1,12 +1,51 @@
 "use client";
 
+import Footer from "@/components/footer";
+import CTASection from "@/components/home/cta-section";
+import FeaturedProjectsSection from "@/components/home/featured-projects-section";
 import { HeroSection } from "@/components/home/hero";
+import IndustriesSection from "@/components/home/industries-section";
+import ServicesSection from "@/components/home/services-section";
+import TechStackSection from "@/components/home/tech-stack-section";
+import TestimonialsSection from "@/components/home/testimonials-section";
+import WhyChooseUsSection from "@/components/home/why-choose-us-section";
 import { Navigation } from "@/components/navigation";
+
+const testimonials = [
+  {
+    author: {
+      name: "Emma Thompson",
+      handle: "@emmaai",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    },
+    text: "Using this AI platform has transformed how we handle data analysis. The speed and accuracy are unprecedented.",
+    href: "https://twitter.com/emmaai",
+  },
+  {
+    author: {
+      name: "David Park",
+      handle: "@davidtech",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    },
+    text: "The API integration is flawless. We've reduced our development time by 60% since implementing this solution.",
+    href: "https://twitter.com/davidtech",
+  },
+  {
+    author: {
+      name: "Sofia Rodriguez",
+      handle: "@sofiaml",
+      avatar:
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    },
+    text: "Finally, an AI tool that actually understands context! The accuracy in natural language processing is impressive.",
+  },
+];
 
 export default function Home() {
   return (
-    <main>
-      <Navigation />
+    <main className="max-w-full overflow-x-hidden">
       <HeroSection
         title="Welcome to Our Platform"
         subtitle={{
@@ -24,6 +63,17 @@ export default function Home() {
           darkLineColor: "#2a2a2a",
         }}
       />
+      <ServicesSection />
+      <WhyChooseUsSection />
+      <FeaturedProjectsSection />
+      <TechStackSection />
+      <TestimonialsSection
+        title="Trusted by developers worldwide"
+        description="Join thousands of developers who are already building the future with our AI platform"
+        testimonials={testimonials}
+      />
+      <IndustriesSection />
+      <CTASection />
     </main>
   );
 }

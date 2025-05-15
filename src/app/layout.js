@@ -1,4 +1,6 @@
+import { Navigation } from "@/components/navigation";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "Afnexis – Innovating Intelligence. Engineering the Future",
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased`}>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
