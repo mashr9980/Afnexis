@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTASection() {
   const sectionRef = useRef(null);
@@ -62,21 +63,25 @@ export default function CTASection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row justify-center gap-4"
         >
-          <Button
-            size="lg"
-            className="bg-primary-foreground hover:bg-primary-foreground/90 text-[#0d1117] font-medium rounded-xl px-8 py-6 text-lg flex items-center gap-2"
-          >
-            <Calendar className="h-5 w-5" />
-            Book a Free Consultation
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground rounded-xl px-8 py-6 text-lg flex items-center gap-2 transition duration-300 "
-          >
-            <MessageSquare className="h-5 w-5" />
-            Contact Us
-          </Button>
+          <Link href={"/contact"}>
+            <Button
+              size="lg"
+              className="bg-primary-foreground hover:bg-primary-foreground/90 text-[#0d1117] font-medium rounded-xl px-8 py-6 text-lg flex items-center gap-2"
+            >
+              <Calendar className="h-5 w-5" />
+              Book a Free Consultation
+            </Button>
+          </Link>
+          <Link href={"/contact"}>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground rounded-xl px-8 py-6 text-lg flex items-center gap-2 transition duration-300 "
+            >
+              <MessageSquare className="h-5 w-5" />
+              Contact Us
+            </Button>
+          </Link>
         </motion.div>
       </Card>
     </motion.div>

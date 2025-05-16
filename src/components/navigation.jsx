@@ -53,7 +53,8 @@ export function Navigation() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "#", subItems: services },
+    { name: "Portfolio", href: "/portfolio" },
+    // { name: "Services", href: "#", subItems: services },
     { name: "About Us ", href: "/about" },
     { name: "Career", href: "/career" },
     { name: "Contact", href: "/contact" },

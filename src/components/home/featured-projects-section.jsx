@@ -12,21 +12,21 @@ const projects = [
     title: "AI-Powered Healthcare Platform",
     description:
       "Developed a machine learning solution that improved diagnostic accuracy by 35% for a leading healthcare provider.",
-    image: "/med.jfif",
+    image: "/assets/med.jfif",
     tags: ["AI", "Healthcare", "Machine Learning"],
   },
   {
     title: "Cloud Migration for Financial Services",
     description:
       "Migrated legacy systems to AWS cloud, reducing operational costs by 40% and improving system reliability.",
-    image: "/med.jfif",
+    image: "/assets/med.jfif",
     tags: ["Cloud", "AWS", "Finance"],
   },
   {
     title: "E-commerce Mobile Application",
     description:
       "Built a cross-platform mobile app that increased customer engagement by 60% and boosted sales by 25%.",
-    image: "/med.jfif",
+    image: "/assets/med.jfif",
     tags: ["Mobile", "React Native", "E-commerce"],
   },
 ];

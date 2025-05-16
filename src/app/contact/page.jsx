@@ -124,7 +124,7 @@ export default function Contact() {
         title="Contact Us"
         subtitle={{
           regular: " Get in Touch ",
-          gradient: " Let's Create Something",
+          gradient: " Let's Create Something  Amazing Together",
         }}
         description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
         ctaText="Contact Us"
