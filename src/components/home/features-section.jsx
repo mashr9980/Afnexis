@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 
 export default function FeaturesSection() {
   const sectionRef = useRef(null);
@@ -42,7 +43,7 @@ export default function FeaturesSection() {
           className="bg-gradient-to-br from-[#1A1A25] to-[#1A1A20] rounded-lg p-8 border border-gray-800"
         >
           <div className="mb-6">
-            <span className="text-gray-400 uppercase text-sm font-medium tracking-wider">
+            <span className="text-primary uppercase text-sm font-medium tracking-wider">
               Productivity
             </span>
             <h3 className="text-white text-2xl md:text-3xl font-bold mt-2 leading-tight">
@@ -54,12 +55,12 @@ export default function FeaturesSection() {
               eiusmod tempor incididunt.
             </p>
           </div>
-          <a
-            href="#"
+          <Link
+            href="/portfolio"
             className="inline-block text-primary border border-primary rounded-full px-6 py-2 text-sm font-medium hover:bg-primary-foreground hover:text-black transition-colors duration-300"
           >
             LEARN MORE
-          </a>
+          </Link>
         </motion.div>
 
         {/* Cross Devices Card */}
@@ -68,7 +69,7 @@ export default function FeaturesSection() {
           className="bg-gradient-to-br from-[#1A1A25] to-[#1A1A20] rounded-lg p-8 border border-gray-800"
         >
           <div className="mb-6">
-            <span className="text-gray-400 uppercase text-sm font-medium tracking-wider">
+            <span className="text-primary uppercase text-sm font-medium tracking-wider">
               Cross Devices
             </span>
             <h3 className="text-white text-2xl md:text-3xl font-bold mt-2 leading-tight">
@@ -123,7 +124,7 @@ export default function FeaturesSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="order-2 md:order-1">
-              <div className="bg-[#0D1117] rounded-lg overflow-hidden border border-gray-800 shadow-lg p-4 font-mono text-sm">
+              <div className="bg-[#0D1117] rounded-lg overflow-hidden border border-gray-800 shadow-lg p-4 font-fira-code text-sm">
                 <div className="flex items-center mb-4">
                   <div className="w-4 h-4 rounded-full bg-gray-500 mr-2 flex items-center justify-center">
                     <span className="text-[8px] text-white">i</span>
@@ -178,7 +179,7 @@ export default function FeaturesSection() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <span className="text-gray-400 uppercase text-sm font-medium tracking-wider">
+              <span className="text-primary uppercase text-sm font-medium tracking-wider">
                 Advance Security
               </span>
               <h3 className="text-white text-2xl md:text-3xl font-bold mt-2 leading-tight">
