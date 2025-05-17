@@ -466,7 +466,7 @@ export default function CareersPage() {
       </section>
 
       {/* Application Process Section */}
-      <section ref={processRef} className="py-20 bg-foreground">
+      <section ref={processRef} className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -492,7 +492,7 @@ export default function CareersPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="bg-[#0d1117] rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 1
@@ -509,7 +509,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-[#0d1117] rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 2
@@ -526,7 +526,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-[#0d1117] rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 3
@@ -543,7 +543,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-[#0d1117] rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 4

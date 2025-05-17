@@ -141,15 +141,8 @@ export default function Contact() {
       {/* Contact Form Section */}
       <section
         id="contact-form"
-        className="py-20 md:py-32 relative overflow-hidden"
+        className="py-20 md:py-32 relative overflow-hidden bg-background"
       >
-        {/* Background Elements */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-[var(--section-bg)] opacity-50"></div>
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-[var(--primary-accent)] rounded-full filter blur-[150px] opacity-10"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[var(--secondary-accent)] rounded-full filter blur-[150px] opacity-10"></div>
-        </div>
-
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <AnimatedSection

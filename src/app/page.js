@@ -1,8 +1,10 @@
 "use client";
 
 import Footer from "@/components/footer";
+import AiCodePlatform from "@/components/home/ai-code-platform";
 import CTASection from "@/components/home/cta-section";
 import FeaturedProjectsSection from "@/components/home/featured-projects-section";
+import FeaturesSection from "@/components/home/features-section";
 import { HeroSection } from "@/components/home/hero";
 import IndustriesSection from "@/components/home/industries-section";
 import ServicesSection from "@/components/home/services-section";
@@ -10,6 +12,7 @@ import TechStackSection from "@/components/home/tech-stack-section";
 import TestimonialsSection from "@/components/home/testimonials-section";
 import WhyChooseUsSection from "@/components/home/why-choose-us-section";
 import { Navigation } from "@/components/navigation";
+import PricingSection from "@/components/pricing-section";
 
 const testimonials = [
   {
@@ -63,6 +66,8 @@ export default function Home() {
           darkLineColor: "#2a2a2a",
         }}
       />
+      <AiCodePlatform />
+      <FeaturesSection />
       <ServicesSection />
       <WhyChooseUsSection />
       <FeaturedProjectsSection />
@@ -72,6 +77,7 @@ export default function Home() {
         description="Join thousands of developers who are already building the future with our AI platform"
         testimonials={testimonials}
       />
+      <PricingSection />
       <IndustriesSection />
       <CTASection />
     </main>

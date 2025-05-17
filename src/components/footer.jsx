@@ -131,7 +131,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> AI Solutions
@@ -139,7 +139,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Cloud Development
@@ -147,7 +147,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Web Development
@@ -155,7 +155,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Mobile Development
@@ -177,10 +177,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/career"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
-                  <ArrowRight className="w-3 h-3 mr-2" /> Careers
+                  <ArrowRight className="w-3 h-3 mr-2" /> Career
                 </Link>
               </li>
               <li>
@@ -193,10 +193,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
-                  <ArrowRight className="w-3 h-3 mr-2" /> Blog
+                  <ArrowRight className="w-3 h-3 mr-2" /> Portfolio
                 </Link>
               </li>
             </ul>

@@ -435,7 +435,7 @@ export default function PortfolioPage() {
       <section
         id="case-studies"
         ref={caseStudiesRef}
-        className="py-20 bg-foreground"
+        className="py-20 bg-background"
       >
         <div className="container mx-auto px-4">
           <motion.div
@@ -519,7 +519,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef} className="py-20 bg-foreground">
+      <section ref={statsRef} className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
@@ -529,7 +529,7 @@ export default function PortfolioPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-background rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={50}
@@ -542,7 +542,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-background rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={100}
@@ -555,7 +555,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-background rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={5}
@@ -568,7 +568,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-background rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={12}

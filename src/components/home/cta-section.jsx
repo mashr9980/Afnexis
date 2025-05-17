@@ -44,7 +44,7 @@ export default function CTASection() {
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <Card className="bg-gradient-to-r from-[#161b22] to-[#1a2233] border-none rounded-[0px] p-10 md:p-16 text-center">
+      <Card className="bg-background border-none rounded-[0px] p-10 md:p-16 text-center">
         <motion.h2
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-headings font-['Poppins'] mb-6"
