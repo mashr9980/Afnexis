@@ -9,8 +9,10 @@
   --font-fira-code: "Fira Code", monospace;
   --primary-bg: #0d1117;
   --section-bg: #161b22;
-  --primary-accent: #00ffc3;
-  --secondary-accent: #4fd1c5;
+  --primary-accent: oklch(71.4% 0.203 305.504);
+  /* --primary-accent: #00ffc3; */
+  /* --secondary-accent: #4fd1c5; */
+  --secondary-accent: oklch(82.7% 0.119 306.383);
   --headings-text: #f0f6fc;
   --body-text: #8b949e;
   --radius: 0.625rem;
@@ -103,11 +105,11 @@
     }
   }
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
 }

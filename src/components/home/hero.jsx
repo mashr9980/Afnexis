@@ -57,7 +57,7 @@ const HeroSection = React.forwardRef(
         ref={ref}
         {...props}
       >
-        <div className="absolute top-0 z-[0] h-full min-h-screen w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+        <div className="absolute top-0 z-[0] h-full  w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         <section className="relative max-w-full mx-auto z-1">
           <RetroGrid {...gridOptions} />
           <div className="max-w-screen-xl z-10 mx-auto px-4 py-28 gap-12 md:px-8">
@@ -86,6 +86,14 @@ const HeroSection = React.forwardRef(
                   </div>
                 </span>
               </div>
+            </div>
+
+            <div className="mt-32 mx-10 relative z-10 ">
+              <img
+                src="/assets/dashboard.png"
+                className=" w-full shadow-lg rounded-lg border border-gray-800 "
+                alt="Dashboard preview"
+              />
             </div>
           </div>
         </section>
