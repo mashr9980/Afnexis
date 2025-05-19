@@ -57,7 +57,7 @@ export default function Home() {
         }}
         description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
         ctaText="Get Started"
-        ctaHref="/signup"
+        ctaHref="/contact"
         gridOptions={{
           angle: 65,
           opacity: 0.4,
