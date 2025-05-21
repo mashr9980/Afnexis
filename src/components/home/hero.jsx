@@ -53,6 +53,31 @@ const HeroSection = React.forwardRef(
     },
     ref
   ) => {
+    const imgRef = React.useRef(null);
+
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && imgRef.current) {
+              imgRef.current.src = gifSrc; // Load GIF when in view
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      if (imgRef.current) {
+        observer.observe(imgRef.current);
+      }
+
+      return () => {
+        if (imgRef.current) {
+          observer.unobserve(imgRef.current);
+        }
+      };
+    }, [gifSrc]);
+
     return (
       <div
         className={cn("relative max-w-full overflow-hidden", className)}
@@ -62,7 +87,8 @@ const HeroSection = React.forwardRef(
       >
         {/* GIF Background */}
         <img
-          src={gifSrc}
+          ref={imgRef}
+          src={posterSrc}
           alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
           loading="lazy"
