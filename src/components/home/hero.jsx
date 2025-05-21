@@ -61,10 +61,11 @@ const HeroSection = React.forwardRef(
         style={{ height: "calc(100vh)" }}
       >
         <video
-          autoPlay
-          muted
-          loop
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
+          autoPlay
+          loop
+          muted
+          playsInline
         >
           <source src={"/assets/hero.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
