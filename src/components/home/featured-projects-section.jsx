@@ -26,7 +26,7 @@ const FeaturedProjectsSection = () => {
 
   return (
     <section ref={sectionRef} className="py-12">
-      <div className="container  px-4 mx-auto">
+      <div className="w-[95%] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

@@ -30,9 +30,9 @@ export default function FeaturesSection() {
   };
 
   return (
-    <div ref={sectionRef} className="bg-black-background py-16 px-4 md:px-8">
+    <div ref={sectionRef} className="bg-black-background py-16 ">
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

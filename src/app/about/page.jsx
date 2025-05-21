@@ -48,11 +48,11 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="h-screen bg-background">
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden"
+        className="relative h-screen flex items-center justify-center overflow-hidden"
       >
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-[url('/assets/about-ai-1.jpg')] bg-cover bg-center">

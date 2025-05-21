@@ -117,7 +117,7 @@
 /* Custom Tailwind CSS class */
 @layer utilities {
   .container-wrapper {
-    @apply max-w-7xl mx-auto px-4;
+    @apply w-[95%] mx-auto;
   }
 }
 
