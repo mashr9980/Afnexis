@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import Link from "next/link";
 
 export default function PricingSection() {
   const sectionRef = useRef(null);
@@ -111,9 +112,11 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <button className="border border-primary text-primary py-2 px-6 rounded-full hover:bg-primary-foreground hover:text-black transition-colors duration-300 mt-auto self-start">
-                LEARN MORE
-              </button>
+              <Link href={"/contact"}>
+                <button className="border border-primary text-primary py-2 px-6 rounded-full hover:bg-primary-foreground hover:text-black transition-colors duration-300 mt-auto self-start">
+                  LEARN MORE
+                </button>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -206,8 +206,8 @@ export default function TechStackSection() {
                 transition-all duration-300 transform 
                 ${
                   hoveredTech === index
-                    ? "scale-110 shadow-[0_0_25px_rgba(0,255,195,0.3)]"
-                    : "hover:translate-y-[-5px] hover:shadow-[0_0_15px_rgba(0,255,195,0.15)]"
+                    ? "scale-110 shadow-[0_0_25px_rgba(194,122,255,0.3)]"
+                    : "hover:translate-y-[-5px] hover:shadow-[0_0_15px_rgba(194,122,255,0.3)]"
                 }
               `}
               onMouseEnter={() => setHoveredTech(index)}

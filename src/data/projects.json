@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "AI-Powered Healthcare Platform",
+    "description": "Developed a machine learning solution that improved diagnostic accuracy by 35% for a leading healthcare provider.",
+    "image": "/assets/med.jfif",
+    "tags": ["AI", "Healthcare", "Machine Learning"],
+    "category": "AI",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 2,
+    "title": "Cloud Migration for Financial Services",
+    "description": "Migrated legacy systems to AWS cloud, reducing operational costs by 40% and improving system reliability.",
+    "image": "/assets/med.jfif",
+    "tags": ["Cloud", "AWS", "Finance"],
+    "category": "Cloud",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 3,
+    "title": "E-commerce Mobile Application",
+    "description": "Built a cross-platform mobile app that increased customer engagement by 60% and boosted sales by 25%.",
+    "image": "/assets/med.jfif",
+    "tags": ["Mobile", "React Native", "E-commerce"],
+    "category": "Mobile",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 4,
+    "title": "Blockchain Supply Chain Solution",
+    "description": "Implemented a blockchain-based supply chain tracking system that improved transparency and reduced fraud by 45%.",
+    "image": "/assets/med.jfif",
+    "tags": ["Blockchain", "Supply Chain", "Web3"],
+    "category": "Blockchain",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 5,
+    "title": "AI Content Generation Platform",
+    "description": "Created an AI-powered content generation tool that helped marketing teams increase productivity by 70%.",
+    "image": "/assets/med.jfif",
+    "tags": ["AI", "Content", "Marketing"],
+    "category": "AI",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 6,
+    "title": "IoT Smart Home System",
+    "description": "Designed and implemented an IoT system for smart homes that reduced energy consumption by 30%.",
+    "image": "/assets/med.jfif",
+    "tags": ["IoT", "Smart Home", "Energy"],
+    "category": "IoT",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 7,
+    "title": "AR Shopping Experience",
+    "description": "Developed an augmented reality shopping experience that increased conversion rates by 40% for a retail client.",
+    "image": "/assets/med.jfif",
+    "tags": ["AR", "Retail", "Mobile"],
+    "category": "Mobile",
+    "featured": true,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 8,
+    "title": "Cloud-Based CRM System",
+    "description": "Built a custom cloud-based CRM that improved sales team efficiency by 55% for a B2B company.",
+    "image": "/assets/med.jfif",
+    "tags": ["Cloud", "CRM", "B2B"],
+    "category": "Cloud",
+    "featured": false,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 9,
+    "title": "Blockchain Identity Verification",
+    "description": "Created a blockchain-based identity verification system that reduced fraud by 80% for a financial institution.",
+    "image": "/assets/med.jfif",
+    "tags": ["Blockchain", "Identity", "Security"],
+    "category": "Blockchain",
+    "featured": false,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 10,
+    "title": "IoT Industrial Monitoring",
+    "description": "Implemented an IoT solution for industrial equipment monitoring that reduced downtime by 65%.",
+    "image": "/assets/med.jfif",
+    "tags": ["IoT", "Industrial", "Monitoring"],
+    "category": "IoT",
+    "featured": false,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 11,
+    "title": "AI Recommendation Engine",
+    "description": "Developed an AI recommendation engine that increased user engagement by 45% for a streaming platform.",
+    "image": "/assets/med.jfif",
+    "tags": ["AI", "Recommendations", "Streaming"],
+    "category": "AI",
+    "featured": false,
+    "link": "https://github.com/"
+  },
+  {
+    "id": 12,
+    "title": "Mobile Health Tracking App",
+    "description": "Created a health tracking mobile app that helped users improve fitness metrics by an average of 30%.",
+    "image": "/assets/med.jfif",
+    "tags": ["Mobile", "Health", "Fitness"],
+    "category": "Mobile",
+    "featured": false,
+    "link": "https://github.com/"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Transforming Healthcare with AI",
+    "subtitle": "How we improved diagnostic accuracy by 35%",
+    "description": "This case study explores how we developed and implemented a machine learning solution for a leading healthcare provider, resulting in significantly improved diagnostic accuracy and patient outcomes.",
+    "image": "/assets/med.jfif",
+    "results": [
+      "35% improvement in diagnostic accuracy",
+      "28% reduction in unnecessary tests",
+      "22% decrease in patient wait times",
+      "$4.2M annual cost savings"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Financial Services Cloud Transformation",
+    "subtitle": "Modernizing legacy infrastructure for a digital future",
+    "description": "Learn how we helped a major financial institution migrate from outdated on-premises systems to a secure, scalable cloud infrastructure, enabling innovation while reducing operational costs.",
+    "image": "/assets/med.jfif",
+    "results": [
+      "40% reduction in operational costs",
+      "99.99% system uptime achieved",
+      "65% faster deployment of new features",
+      "Enhanced security and compliance posture"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "E-commerce Revolution with Mobile",
+    "subtitle": "Driving engagement and sales through innovative mobile experiences",
+    "description": "Discover how our cross-platform mobile application transformed the customer experience for a retail client, leading to dramatic increases in engagement, conversion rates, and overall sales.",
+    "image": "/assets/med.jfif",
+    "results": [
+      "60% increase in customer engagement",
+      "25% boost in overall sales",
+      "42% higher average order value",
+      "4.8/5 average app store rating"
+    ]
+  }
+]

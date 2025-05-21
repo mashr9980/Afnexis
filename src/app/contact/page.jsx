@@ -164,7 +164,7 @@ export default function Contact() {
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <div className="w-8 h-8 rounded-full bg-[rgba(0,255,195,0.2)] flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[rgba(194,122,255,0.3)] flex items-center justify-center">
                       <Clock className="w-4 h-4 text-[var(--primary-accent)]" />
                     </div>
                   </div>
@@ -179,7 +179,7 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <div className="w-8 h-8 rounded-full bg-[rgba(0,255,195,0.2)] flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[rgba(194,122,255,0.3)] flex items-center justify-center">
                       <Globe className="w-4 h-4 text-[var(--primary-accent)]" />
                     </div>
                   </div>
@@ -194,7 +194,7 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <div className="w-8 h-8 rounded-full bg-[rgba(0,255,195,0.2)] flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[rgba(194,122,255,0.3)] flex items-center justify-center">
                       <MessageSquare className="w-4 h-4 text-[var(--primary-accent)]" />
                     </div>
                   </div>

@@ -1,18 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useRef, useState } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Globe, Layers, Lightbulb, Rocket, Search, Star } from "lucide-react";
+import { Globe, Layers, Lightbulb, Search, Star } from "lucide-react";
 import CustomTabs from "@/components/custom-tabs";
 import PortfolioCard from "@/components/portfolio/portfolio-card";
 import CaseStudyCard from "@/components/portfolio/case-study-card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedCounter from "@/components/animated-counter";
 import CTASection from "@/components/home/cta-section";
+
+//  PROJECTS DATA FROM JSON
+import projectsData from "@/data/projects.json";
+import caseStudies from "@/data/case-studies.json";
 
 export default function PortfolioPage() {
   const heroRef = useRef(null);
@@ -52,146 +55,62 @@ export default function PortfolioPage() {
     },
   };
 
-  // Portfolio projects data
-  const projects = [
-    {
-      id: 1,
-      title: "AI-Powered Healthcare Platform",
-      description:
-        "A machine learning solution that improved diagnostic accuracy by 35% for a leading healthcare provider.",
-      image: "/assets/med.jfif",
-      category: "AI",
-      tags: ["Machine Learning", "Healthcare", "Python", "TensorFlow"],
-      featured: true,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 2,
-      title: "Cloud Migration for Financial Services",
-      description:
-        "Migrated legacy systems to AWS cloud, reducing operational costs by 40% and improving system reliability.",
-      image: "/assets/med.jfif",
-      category: "Cloud",
-      tags: ["AWS", "DevOps", "Terraform", "Microservices"],
-      featured: true,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 3,
-      title: "E-commerce Mobile Application",
-      description:
-        "Built a cross-platform mobile app that increased customer engagement by 60% and boosted sales by 25%.",
-      image: "/assets/med.jfif",
-      category: "Mobile",
-      tags: ["React Native", "E-commerce", "UI/UX", "Node.js"],
-      featured: true,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 4,
-      title: "Real-time Analytics Dashboard",
-      description:
-        "Developed a real-time data visualization platform that processes over 1 million events per minute.",
-      image: "/assets/med.jfif",
-      category: "Data",
-      tags: ["Big Data", "React", "D3.js", "Kafka"],
-      featured: false,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 5,
-      title: "Smart City IoT Network",
-      description:
-        "Designed and implemented an IoT network for urban infrastructure monitoring and optimization.",
-      image: "/assets/med.jfif",
-      category: "IoT",
-      tags: ["IoT", "Embedded Systems", "Cloud", "Data Analysis"],
-      featured: false,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 6,
-      title: "Blockchain Supply Chain Solution",
-      description:
-        "Created a blockchain-based platform for supply chain transparency and product authenticity verification.",
-      image: "/assets/med.jfif",
-      category: "Blockchain",
-      tags: ["Blockchain", "Ethereum", "Smart Contracts", "Web3"],
-      featured: false,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 7,
-      title: "Enterprise Resource Planning System",
-      description:
-        "Custom ERP solution that streamlined operations and increased productivity by 45% for a manufacturing client.",
-      image: "/assets/med.jfif",
-      category: "Enterprise",
-      tags: ["ERP", "Java", "PostgreSQL", "Microservices"],
-      featured: false,
-      link: "/assets/med.jfif",
-    },
-    {
-      id: 8,
-      title: "AR Product Visualization App",
-      description:
-        "Augmented reality application allowing customers to visualize products in their space before purchasing.",
-      image: "/assets/med.jfif",
-      category: "AR/VR",
-      tags: ["AR", "Unity", "Mobile", "3D Modeling"],
-      featured: false,
-      link: "/assets/med.jfif",
-    },
+  // And then map the data to match your existing structure:
+  const projects = projectsData.map((project) => ({
+    id: project.id,
+    title: project.title,
+    description: project.description,
+    image: project.image || "/assets/med.jfif",
+    category: project.category,
+    tags: project.tags,
+    featured: project.featured,
+    link: project.link || "/assets/med.jfif",
+  }));
+
+  // Filter projects based on search query
+  const filteredProjects = projects.filter(
+    (project) =>
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      project.tags.some((tag) =>
+        tag.toLowerCase().includes(searchQuery.toLowerCase())
+      ) ||
+      project.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Create project grid for each category
+  const createProjectGrid = (projectList) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projectList.map((project) => (
+        <motion.div key={project.id} variants={fadeIn}>
+          <PortfolioCard project={project} />
+        </motion.div>
+      ))}
+    </div>
+  );
+
+  // Extract unique categories from projects
+  const categories = [
+    "All",
+    ...new Set(projects.map((project) => project.category)),
   ];
 
-  // Case studies data
-  const caseStudies = [
+  // Define tabs with their content
+  const projectTabs = [
     {
-      id: 1,
-      title: "Transforming Healthcare with AI",
-      subtitle: "How we improved diagnostic accuracy by 35%",
-      description:
-        "This case study explores how we developed and implemented a machine learning solution for a leading healthcare provider, resulting in significantly improved diagnostic accuracy and patient outcomes.",
-      image: "/assets/med.jfif",
-      results: [
-        "35% improvement in diagnostic accuracy",
-        "28% reduction in unnecessary tests",
-        "22% decrease in patient wait times",
-        "$4.2M annual cost savings",
-      ],
-      link: "/portfolio/case-studies/healthcare-ai",
+      value: "all",
+      label: "All Projects",
+      content: createProjectGrid(filteredProjects),
     },
-    {
-      id: 2,
-      title: "Financial Services Cloud Transformation",
-      subtitle: "Modernizing legacy infrastructure for a digital future",
-      description:
-        "Learn how we helped a major financial institution migrate from outdated on-premises systems to a secure, scalable cloud infrastructure, enabling innovation while reducing operational costs.",
-      image: "/assets/med.jfif",
-      results: [
-        "40% reduction in operational costs",
-        "99.99% system uptime achieved",
-        "65% faster deployment of new features",
-        "Enhanced security and compliance posture",
-      ],
-      link: "/portfolio/case-studies/finance-cloud",
-    },
-    {
-      id: 3,
-      title: "E-commerce Revolution with Mobile",
-      subtitle:
-        "Driving engagement and sales through innovative mobile experiences",
-      description:
-        "Discover how our cross-platform mobile application transformed the customer experience for a retail client, leading to dramatic increases in engagement, conversion rates, and overall sales.",
-      image: "/assets/med.jfif",
-      results: [
-        "60% increase in customer engagement",
-        "25% boost in overall sales",
-        "42% higher average order value",
-        "4.8/5 average app store rating",
-      ],
-      link: "/portfolio/case-studies/ecommerce-mobile",
-    },
+    ...categories
+      .filter((category) => category !== "All")
+      .map((category) => ({
+        value: category.toLowerCase(),
+        label: category,
+        content: createProjectGrid(
+          filteredProjects.filter((project) => project.category === category)
+        ),
+      })),
   ];
 
   // Skills and technologies data
@@ -246,72 +165,6 @@ export default function PortfolioPage() {
         "Data Warehousing",
       ],
       icon: <Star className="h-6 w-6" />,
-    },
-  ];
-
-  // Filter projects based on search query
-  const filteredProjects = projects.filter(
-    (project) =>
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.tags.some((tag) =>
-        tag.toLowerCase().includes(searchQuery.toLowerCase())
-      ) ||
-      project.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  // Create project grid for each category
-  const createProjectGrid = (projectList) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projectList.map((project) => (
-        <motion.div key={project.id} variants={fadeIn}>
-          <PortfolioCard project={project} />
-        </motion.div>
-      ))}
-    </div>
-  );
-
-  // Define tabs with their content
-  const projectTabs = [
-    {
-      value: "all",
-      label: "All Projects",
-      content: createProjectGrid(filteredProjects),
-    },
-    {
-      value: "ai",
-      label: "AI",
-      content: createProjectGrid(
-        filteredProjects.filter((project) => project.category === "AI")
-      ),
-    },
-    {
-      value: "cloud",
-      label: "Cloud",
-      content: createProjectGrid(
-        filteredProjects.filter((project) => project.category === "Cloud")
-      ),
-    },
-    {
-      value: "mobile",
-      label: "Mobile",
-      content: createProjectGrid(
-        filteredProjects.filter((project) => project.category === "Mobile")
-      ),
-    },
-    {
-      value: "data",
-      label: "Data",
-      content: createProjectGrid(
-        filteredProjects.filter((project) => project.category === "Data")
-      ),
-    },
-    {
-      value: "enterprise",
-      label: "Enterprise",
-      content: createProjectGrid(
-        filteredProjects.filter((project) => project.category === "Enterprise")
-      ),
     },
   ];
 
@@ -493,7 +346,7 @@ export default function PortfolioPage() {
         >
           {skills.map((skill, index) => (
             <motion.div key={index} variants={fadeIn} custom={index * 0.2}>
-              <Card className="bg-foreground border-none rounded-xl p-6 h-full hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300">
+              <Card className="bg-foreground border-none rounded-xl p-6 h-full hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-background rounded-lg mr-4 text-primary-foreground">
                     {skill.icon}
@@ -529,7 +382,7 @@ export default function PortfolioPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={50}
@@ -542,7 +395,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={100}
@@ -555,7 +408,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={5}
@@ -568,7 +421,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={12}

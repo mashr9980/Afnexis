@@ -119,7 +119,7 @@ export default function WhyChooseUsSection() {
           {reasons.map((reason, index) => (
             <Card
               key={index}
-              className={`bg-foreground border-none rounded-xl p-6 transition-all duration-500 transform hover:translate-y-[-5px] hover:shadow-[0_0_15px_rgba(0,255,195,0.2)] delay-${
+              className={`bg-foreground border-none rounded-xl p-6 transition-all duration-500 transform hover:translate-y-[-5px] hover:shadow-[0_0_15px_rgba(194,122,255,0.3)] delay-${
                 index * 100
               }`}
             >
@@ -145,7 +145,7 @@ export default function WhyChooseUsSection() {
                 key={index}
                 className={`text-center transition-all duration-500 transform delay-${
                   index * 200
-                } bg-foreground rounded-xl p-8 hover:shadow-[0_0_15px_rgba(0,255,195,0.15)]`}
+                } bg-foreground rounded-xl p-8 hover:shadow-[0_0_15px_rgba(194,122,255,0.3)]`}
               >
                 <div className="flex justify-center mb-4">{stat.icon}</div>
                 <div className="text-5xl font-bold text-primary-foreground font-['Poppins'] mb-2 flex items-center justify-center">

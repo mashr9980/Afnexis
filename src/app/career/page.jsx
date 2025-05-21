@@ -28,6 +28,8 @@ import { Input } from "@/components/ui/input";
 import CTASection from "@/components/home/cta-section";
 import FAQ from "@/components/faq";
 import CustomTabs from "@/components/custom-tabs";
+import jobs from "@/data/jobs.json";
+import testimonials from "@/data/employee-testimonial.json";
 
 export default function CareersPage() {
   const heroRef = useRef(null);
@@ -71,100 +73,6 @@ export default function CareersPage() {
     },
   };
 
-  // Job listings data
-  const jobs = [
-    {
-      id: 1,
-      title: "Senior AI Engineer",
-      department: "Engineering",
-      location: "San Francisco, CA (Hybrid)",
-      type: "Full-time",
-      description:
-        "Design and implement machine learning models and AI solutions for our enterprise clients. Work with cutting-edge technologies to solve complex business problems.",
-      requirements: [
-        "5+ years of experience in machine learning and AI development",
-        "Proficiency in Python, TensorFlow, and PyTorch",
-        "Experience with NLP and computer vision applications",
-        "Strong mathematical background in statistics and algorithms",
-      ],
-    },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      description:
-        "Build robust, scalable web applications using modern JavaScript frameworks. Collaborate with cross-functional teams to deliver exceptional user experiences.",
-      requirements: [
-        "3+ years of experience with React, Node.js, and modern JavaScript",
-        "Experience with database design and ORM frameworks",
-        "Knowledge of cloud services (AWS, Azure, or GCP)",
-        "Understanding of CI/CD pipelines and DevOps practices",
-      ],
-    },
-    {
-      id: 3,
-      title: "UX/UI Designer",
-      department: "Design",
-      location: "New York, NY (On-site)",
-      type: "Full-time",
-      description:
-        "Create intuitive, engaging user experiences for web and mobile applications. Translate complex requirements into elegant design solutions.",
-      requirements: [
-        "3+ years of experience in UX/UI design for digital products",
-        "Proficiency in Figma, Sketch, and Adobe Creative Suite",
-        "Portfolio demonstrating strong visual design skills",
-        "Experience conducting user research and usability testing",
-      ],
-    },
-    {
-      id: 4,
-      title: "DevOps Engineer",
-      department: "Operations",
-      location: "Remote",
-      type: "Full-time",
-      description:
-        "Build and maintain our cloud infrastructure and deployment pipelines. Ensure reliability, security, and scalability of our systems.",
-      requirements: [
-        "4+ years of experience in cloud infrastructure and DevOps",
-        "Strong knowledge of AWS or Azure services",
-        "Experience with containerization (Docker, Kubernetes)",
-        "Proficiency in infrastructure as code (Terraform, CloudFormation)",
-      ],
-    },
-    {
-      id: 5,
-      title: "Product Manager",
-      department: "Product",
-      location: "Austin, TX (Hybrid)",
-      type: "Full-time",
-      description:
-        "Lead the development of innovative products from conception to launch. Work closely with engineering, design, and business teams to deliver value to customers.",
-      requirements: [
-        "4+ years of experience in product management for technology products",
-        "Strong analytical skills and data-driven decision making",
-        "Excellent communication and stakeholder management abilities",
-        "Experience with agile development methodologies",
-      ],
-    },
-    {
-      id: 6,
-      title: "Data Scientist",
-      department: "Data",
-      location: "Remote",
-      type: "Full-time",
-      description:
-        "Extract insights from complex datasets to drive business decisions. Develop predictive models and data visualization solutions.",
-      requirements: [
-        "3+ years of experience in data science or related field",
-        "Proficiency in Python, R, and SQL",
-        "Experience with data visualization tools (Tableau, Power BI)",
-        "Strong statistical analysis and modeling skills",
-      ],
-    },
-  ];
-
   // Filter jobs based on search query
   const filteredJobs = jobs.filter(
     (job) =>
@@ -172,34 +80,6 @@ export default function CareersPage() {
       job.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
       job.location.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
-  // Employee testimonials
-  const testimonials = [
-    {
-      name: "David Chen",
-      role: "Senior AI Engineer",
-      image: "/assets/picture.jpg",
-      quote:
-        "Working at Afnexis has been the highlight of my career. I get to solve challenging problems with cutting-edge technology while collaborating with some of the brightest minds in the industry.",
-      years: "3 years at Afnexis",
-    },
-    {
-      name: "Sophia Rodriguez",
-      role: "Product Designer",
-      image: "/assets/picture.jpg",
-      quote:
-        "The culture at Afnexis truly values creativity and innovation. I've grown tremendously as a designer here, and I appreciate how my ideas are always heard and respected.",
-      years: "2 years at Afnexis",
-    },
-    {
-      name: "Marcus Johnson",
-      role: "Full Stack Developer",
-      image: "/assets/picture.jpg",
-      quote:
-        "The work-life balance and remote flexibility at Afnexis is unmatched. I can do my best work while still having time for my family and personal interests.",
-      years: "4 years at Afnexis",
-    },
-  ];
 
   // Create tab content for each category
   const createJobGrid = (jobList) => (

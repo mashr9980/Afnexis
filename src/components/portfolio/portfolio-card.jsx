@@ -7,13 +7,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
 export default function PortfolioCard({ project }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Card
-      className="bg-foreground border-none rounded-xl overflow-hidden h-full transition-all duration-500 hover:shadow-[0_0_25px_rgba(0,255,195,0.2)]"
+      className="bg-foreground border-none rounded-xl overflow-hidden h-full transition-all duration-500 hover:shadow-[0_0_25px_rgba(194,122,255,0.3)]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -67,16 +66,6 @@ export default function PortfolioCard({ project }) {
               className="text-primary-foreground hover:text-primary-foreground hover:bg-background p-0 flex items-center gap-1"
             >
               View Details <ArrowRight className="h-4 w-4" />
-            </Button>
-          </Link>
-          <Link href={project.link}>
-            <Button
-              size="icon"
-              variant="outline"
-              className="rounded-full border-primary-foreground/30 hover:border-primary-foreground hover:bg-background w-8 h-8"
-            >
-              <Eye className="h-4 w-4 text-primary-foreground" />
-              <span className="sr-only">View project</span>
             </Button>
           </Link>
         </div>

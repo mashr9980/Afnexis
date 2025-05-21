@@ -274,7 +274,7 @@ export default function AboutPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={50}
@@ -287,7 +287,7 @@ export default function AboutPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={100}
@@ -300,7 +300,7 @@ export default function AboutPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={5}
@@ -313,7 +313,7 @@ export default function AboutPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(0,255,195,0.15)] transition-all duration-300"
+              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={12}
