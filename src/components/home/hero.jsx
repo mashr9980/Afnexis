@@ -45,12 +45,39 @@ const HeroSection = React.forwardRef(
       description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
       ctaText = "Browse courses",
       ctaHref = "#",
+      gifSrc = "/assets/hero.gif",
+      posterSrc = "/images/about.jpg", // Fallback image
 
       gridOptions,
       ...props
     },
     ref
   ) => {
+    const imgRef = React.useRef(null);
+
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && imgRef.current) {
+              imgRef.current.src = gifSrc; // Load GIF when in view
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      if (imgRef.current) {
+        observer.observe(imgRef.current);
+      }
+
+      return () => {
+        if (imgRef.current) {
+          observer.unobserve(imgRef.current);
+        }
+      };
+    }, [gifSrc]);
+
     return (
       <div
         className={cn("relative max-w-full overflow-hidden", className)}
@@ -58,17 +85,15 @@ const HeroSection = React.forwardRef(
         {...props}
         style={{ height: "calc(100vh)" }}
       >
-        {/* Video Background */}
-        <video
+        {/* GIF Background */}
+        <img
+          ref={imgRef}
+          src={posterSrc} // Initial poster image
+          alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src={"/assets/hero.mp4"} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          loading="lazy"
+        />
+
         <div className="absolute top-0 z-[0] h-full  w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         <section className="relative max-w-full h-full  mx-auto z-1">
           <RetroGrid {...gridOptions} />
