@@ -53,31 +53,6 @@ const HeroSection = React.forwardRef(
     },
     ref
   ) => {
-    const imgRef = React.useRef(null);
-
-    React.useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && imgRef.current) {
-              imgRef.current.src = gifSrc; // Load GIF when in view
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      if (imgRef.current) {
-        observer.observe(imgRef.current);
-      }
-
-      return () => {
-        if (imgRef.current) {
-          observer.unobserve(imgRef.current);
-        }
-      };
-    }, [gifSrc]);
-
     return (
       <div
         className={cn("relative max-w-full overflow-hidden", className)}
@@ -85,15 +60,15 @@ const HeroSection = React.forwardRef(
         {...props}
         style={{ height: "calc(100vh)" }}
       >
-        {/* GIF Background */}
-        <img
-          ref={imgRef}
-          src={posterSrc}
-          alt="Hero background"
+        <video
+          autoPlay
+          muted
+          loop
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
-          loading="lazy"
-        />
-
+        >
+          <source src={"/assets/hero.mp4"} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute top-0 z-[0] h-full  w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
         <section className="relative max-w-full h-full  mx-auto z-1">
           <RetroGrid {...gridOptions} />

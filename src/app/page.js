@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/footer";
 import AiCodePlatform from "@/components/home/ai-code-platform";
 import CTASection from "@/components/home/cta-section";
 import FeaturedProjectsSection from "@/components/home/featured-projects-section";
