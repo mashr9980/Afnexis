@@ -83,7 +83,7 @@ export default function FeaturesSection() {
           </div>
           <div className="flex justify-between items-end">
             <a
-              href="#"
+              href="/portfolio"
               className="inline-block text-primary border border-primary rounded-full px-6 py-2 text-sm font-medium hover:bg-primary-foreground hover:text-black transition-colors duration-300"
             >
               LEARN MORE
@@ -191,7 +191,7 @@ export default function FeaturesSection() {
                 eiusmod.
               </p>
               <a
-                href="#"
+                href="/portfolio"
                 className="inline-block text-primary border border-primary rounded-full px-6 py-2 text-sm font-medium hover:bg-primary-foreground hover:text-black transition-colors duration-300"
               >
                 LEARN MORE

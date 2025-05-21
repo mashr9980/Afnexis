@@ -159,7 +159,7 @@ export default function AiCodePlatform() {
             eiusmod tempor incididunt ut labore mollis nunc sed id semper.
           </p>
           <Link
-            href="portfolio"
+            href="/portfolio"
             className="inline-flex items-center text-primary font-medium hover:underline"
           >
             LEARN MORE <ArrowRight className="ml-2 size-4" />
