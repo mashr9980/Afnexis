@@ -67,7 +67,7 @@ const HeroSection = React.forwardRef(
           muted
           playsInline
         >
-          <source src={"/assets/hero-new.mp4"} type="video/mp4" />
+          <source src={"/assets/hero-new-bg.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute top-0 z-[0] h-full  w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
