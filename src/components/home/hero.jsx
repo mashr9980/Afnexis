@@ -73,7 +73,7 @@ const HeroSection = React.forwardRef(
 
         <img
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
-          src="https://media.giphy.com/media/ITRemFlr5tS39AzQUL/giphy.gif"
+          src="/assets/bg-gif.gif"
           alt="Background GIF"
         />
         <div className="absolute top-0 z-[0] h-full  w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
