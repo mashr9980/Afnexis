@@ -5,10 +5,58 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Tooltip from "../ui/tooltip";
+
+const TagsDisplay = ({ tags, maxVisible = 4 }) => {
+  const [showAllTags, setShowAllTags] = useState(false);
+  const visibleTags = showAllTags ? tags : tags.slice(0, maxVisible);
+  const hiddenCount = tags.length - maxVisible;
+
+  return (
+    <div className="flex flex-wrap gap-2 mb-4">
+      {visibleTags.map((tag, index) => (
+        <span
+          key={index}
+          className="text-xs px-2 py-1 rounded-full bg-background text-text"
+        >
+          {tag}
+        </span>
+      ))}
+      {!showAllTags && hiddenCount > 0 && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setShowAllTags(true);
+          }}
+          className="text-xs px-2 py-1 rounded-full bg-background text-text hover:bg-background/80 transition-colors"
+        >
+          +{hiddenCount} more
+        </button>
+      )}
+      {showAllTags && tags.length > maxVisible && (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setShowAllTags(false);
+          }}
+          className="text-xs px-2 py-1 rounded-full bg-background text-text hover:bg-background/80 transition-colors"
+        >
+          Show less
+        </button>
+      )}
+    </div>
+  );
+};
+
 export default function PortfolioCard({ project }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const isContentTruncated = (text) => {
+    return text.length > 120;
+  };
 
   return (
     <Card
@@ -43,24 +91,27 @@ export default function PortfolioCard({ project }) {
             {project.category}
           </Badge>
         </div>
-        <h3 className="text-xl font-bold text-headings font-['Poppins'] mb-3">
+
+        <h3 className="text-xl font-bold text-headings font-['Poppins'] mb-3 line-clamp-2">
           {project.title}
         </h3>
-        <p className="text-text mb-4 line-clamp-3">{project.description}</p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="text-xs px-2 py-1 rounded-full bg-background text-text"
-            >
-              {tag}
-            </span>
-          ))}
+        <div
+          className="mb-4"
+          onMouseEnter={() =>
+            setShowTooltip(isContentTruncated(project.description))
+          }
+          onMouseLeave={() => setShowTooltip(false)}
+        >
+          <Tooltip content={project.description} show={showTooltip}>
+            <p className="text-text line-clamp-3 ">{project.description}</p>
+          </Tooltip>
         </div>
 
+        <TagsDisplay tags={project.tags} />
+
         <div className="flex justify-between items-center">
-          <Link href={project.link}>
+          <Link href={project.link} target="_blank" rel="noopener noreferrer">
             <Button
               variant="ghost"
               className="text-primary-foreground hover:text-primary-foreground hover:bg-background p-0 flex items-center gap-1"

@@ -51,8 +51,9 @@ export default function FeaturesSection() {
               ways
             </h3>
             <p className="text-gray-400 mt-4 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              eiusmod tempor incididunt.
+              Boost your workflow with AI-driven insights that automate
+              repetitive tasks, suggest optimizations, and streamline project
+              management across your development pipeline.
             </p>
           </div>
           <Link
@@ -77,8 +78,9 @@ export default function FeaturesSection() {
               devices
             </h3>
             <p className="text-gray-400 mt-4 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-              eiusmod tempor incididunt.
+              Access our platform seamlessly on desktops, tablets, or
+              smartphones, ensuring you can code, collaborate, and deploy from
+              any device, anytime, anywhere.
             </p>
           </div>
           <div className="flex justify-between items-end">
@@ -187,8 +189,9 @@ export default function FeaturesSection() {
                 secure code quickly
               </h3>
               <p className="text-gray-400 mt-4 text-sm mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                eiusmod.
+                Detect and resolve security vulnerabilities in real-time with
+                AI-powered scanning, enabling you to ship secure, reliable code
+                with confidence.
               </p>
               <a
                 href="/portfolio"

@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function JobCard({ job }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -16,7 +17,7 @@ export default function JobCard({ job }) {
           <h3 className="text-xl font-bold text-headings font-['Poppins']">
             {job.title}
           </h3>
-          <span className="bg-[rgba(0,255,195,0.1)] text-primary-foreground text-xs px-3 py-1 rounded-full">
+          <span className="bg-[rgba(194,122,255,0.1)] text-primary-foreground text-xs px-3 py-1 rounded-full">
             {job.type}
           </span>
         </div>
@@ -58,14 +59,16 @@ export default function JobCard({ job }) {
         <div className="flex justify-between items-center">
           <Button
             variant="ghost"
-            className="text-primary-foreground hover:text-primary-foreground hover:bg-[rgba(0,255,195,0.1)] p-0"
+            className="text-primary-foreground hover:text-primary-foreground hover:bg-[rgba(194,122,255,0.1)] p-2"
             onClick={() => setIsExpanded(!isExpanded)}
           >
             {isExpanded ? "Show Less" : "Show More"}
           </Button>
-          <Button className="bg-primary-foreground hover:bg-primary-foreground/90 text-[#0d1117]">
-            Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href={"/contact"}>
+            <Button className="bg-primary-foreground hover:bg-primary-foreground/90 text-[#0d1117]">
+              Apply Now <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>

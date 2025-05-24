@@ -20,7 +20,7 @@ export default function CompanyValue({ icon, title, description }) {
     >
       <Card className="bg-foreground border-none rounded-xl p-6 h-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] hover:translate-y-[-5px]">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-4 p-3 bg-[rgba(0,255,195,0.1)] rounded-full">
+          <div className="mb-4 p-3 bg-[rgba(194,122,255,0.1)] rounded-full">
             {icon}
           </div>
           <h3 className="text-xl font-bold text-headings font-['Poppins'] mb-3">

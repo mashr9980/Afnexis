@@ -69,7 +69,7 @@ const Footer = () => {
               {/* Social icons would go here */}
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

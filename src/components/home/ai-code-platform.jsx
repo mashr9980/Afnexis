@@ -155,8 +155,11 @@ export default function AiCodePlatform() {
         <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
           <h3 className="text-xl font-bold mb-2">Coding Tools</h3>
           <p className="text-gray-400 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore mollis nunc sed id semper.
+            Our AI-powered coding tools enhance your development workflow by
+            providing real-time error detection, intelligent code suggestions,
+            and seamless integration with popular IDEs. Boost productivity and
+            write cleaner, more efficient code with advanced analytics and
+            automated debugging.
           </p>
           <Link
             href="/portfolio"

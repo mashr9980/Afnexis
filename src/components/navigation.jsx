@@ -182,7 +182,7 @@ export function Navigation() {
             className="md:hidden"
             ref={mobileMenuRef}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-foreground/80 backdrop-blur-sm sm:px-3">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.subItems ? (

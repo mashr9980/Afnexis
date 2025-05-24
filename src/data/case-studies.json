@@ -17,7 +17,7 @@
     "title": "Financial Services Cloud Transformation",
     "subtitle": "Modernizing legacy infrastructure for a digital future",
     "description": "Learn how we helped a major financial institution migrate from outdated on-premises systems to a secure, scalable cloud infrastructure, enabling innovation while reducing operational costs.",
-    "image": "/assets/med.jfif",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop&crop=center",
     "results": [
       "40% reduction in operational costs",
       "99.99% system uptime achieved",
@@ -30,7 +30,7 @@
     "title": "E-commerce Revolution with Mobile",
     "subtitle": "Driving engagement and sales through innovative mobile experiences",
     "description": "Discover how our cross-platform mobile application transformed the customer experience for a retail client, leading to dramatic increases in engagement, conversion rates, and overall sales.",
-    "image": "/assets/med.jfif",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=center",
     "results": [
       "60% increase in customer engagement",
       "25% boost in overall sales",

@@ -40,7 +40,7 @@ export default function PricingSection() {
       price: ".Free Trial",
       period: "/30 Day",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
+        "Get started with our free trial to explore core AI features, perfect for individual developers looking to test the platform’s capabilities.",
       features: ["Trial Access Platform", "Trial Tools", "Direct Support: No"],
     },
     {
@@ -48,7 +48,7 @@ export default function PricingSection() {
       price: ".$39 USD",
       period: "/30 Day",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
+        "Unlock advanced AI tools, premium support, and full platform access for professional developers and small teams building innovative projects.",
       features: ["All Access Platform", "Premium Tools", "Direct Support: Yes"],
     },
     {
@@ -56,7 +56,7 @@ export default function PricingSection() {
       price: ".$1,499 USD",
       period: "/30 Day",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.",
+        "Scale your development with enterprise-grade AI tools, priority support, and API access for large teams and mission-critical applications.",
       features: [
         "All Access Platform",
         "Premium Tools + API Access",
@@ -84,8 +84,9 @@ export default function PricingSection() {
             Try starting for <span className="text-primary">FREE!</span>
           </motion.h2>
           <motion.p className="text-gray-400 max-w-md" variants={itemVariants}>
-            Nibh tellus molestie nunc non blandit massa semper lorem ipsum dolor
-            sit amet, consectetur adipiscing elit.
+            Explore our flexible pricing plans to unlock powerful AI tools,
+            designed to accelerate your development and enhance your coding
+            experience.
           </motion.p>
         </div>
 

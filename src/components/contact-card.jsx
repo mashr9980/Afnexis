@@ -22,7 +22,7 @@ export default function ContactCard({
     >
       <div className="flex items-start">
         <div className="mr-4 mt-1">
-          <div className="w-12 h-12 rounded-full bg-[rgba(0,255,195,0.1)] flex items-center justify-center text-[var(--primary-accent)]">
+          <div className="w-12 h-12 rounded-full bg-[rgba(194,122,255,0.1)] flex items-center justify-center text-[var(--primary-accent)]">
             {icon}
           </div>
         </div>
