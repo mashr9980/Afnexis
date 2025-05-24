@@ -143,7 +143,7 @@ export default function Contact() {
         id="contact-form"
         className="py-20 md:py-32 relative overflow-hidden bg-background"
       >
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container-wrapper relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <AnimatedSection
               animation="slide-right"

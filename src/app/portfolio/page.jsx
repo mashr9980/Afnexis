@@ -247,7 +247,7 @@ export default function PortfolioPage() {
       <section
         id="featured-projects"
         ref={projectsRef}
-        className="py-20 container mx-auto px-4"
+        className="py-20 container-wrapper mx-auto "
       >
         <motion.div
           className="text-center mb-16"
@@ -290,7 +290,7 @@ export default function PortfolioPage() {
         ref={caseStudiesRef}
         className="py-20 bg-background"
       >
-        <div className="container mx-auto px-4">
+        <div className="container-wrapper mx-auto ">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -322,7 +322,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Skills & Technologies Section */}
-      <section ref={skillsRef} className="py-20 container mx-auto px-4">
+      <section ref={skillsRef} className="py-20 container-wrapper mx-auto ">
         <motion.div
           className="text-center mb-16"
           initial="hidden"

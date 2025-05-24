@@ -48,7 +48,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="h-screen bg-background">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -91,7 +91,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section ref={storyRef} className="py-20 container mx-auto px-4">
+      <section ref={storyRef} className="py-20 container-wrapper mx-auto ">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
           initial="hidden"
@@ -142,7 +142,7 @@ export default function AboutPage() {
 
       {/* Our Values Section */}
       <section ref={valuesRef} className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container-wrapper mx-auto ">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -201,7 +201,7 @@ export default function AboutPage() {
       {/* Leadership Team Section */}
       <section
         ref={teamRef}
-        className="py-20 bg-background container mx-auto px-4"
+        className="py-20 bg-background container-wrapper mx-auto "
       >
         <motion.div
           className="text-center mb-16"
@@ -265,7 +265,7 @@ export default function AboutPage() {
 
       {/* Company Stats Section with Counter Animation */}
       <section ref={statsRef} className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container-wrapper">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
             initial="hidden"

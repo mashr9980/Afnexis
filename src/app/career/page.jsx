@@ -163,7 +163,7 @@ export default function CareersPage() {
         </div>
 
         <motion.div
-          className="container mx-auto px-4 relative z-10 text-center"
+          className="container-wrapper relative z-10 text-center"
           initial="hidden"
           animate={heroVisible ? "visible" : "hidden"}
           variants={staggerContainer}
@@ -197,7 +197,7 @@ export default function CareersPage() {
       </section>
 
       {/* Our Culture Section */}
-      <section ref={cultureRef} className="py-20 container mx-auto px-4">
+      <section ref={cultureRef} className="py-20 container-wrapper">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
           initial="hidden"
@@ -242,7 +242,7 @@ export default function CareersPage() {
 
       {/* Benefits Section */}
       <section ref={benefitsRef} className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container-wrapper">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -307,7 +307,7 @@ export default function CareersPage() {
       <section
         id="open-positions"
         ref={openingsRef}
-        className="py-20 container mx-auto px-4"
+        className="py-20 container-wrapper"
       >
         <motion.div
           className="text-center mb-16"
@@ -347,7 +347,7 @@ export default function CareersPage() {
 
       {/* Application Process Section */}
       <section ref={processRef} className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container-wrapper">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -442,7 +442,7 @@ export default function CareersPage() {
       </section>
 
       {/* Employee Testimonials */}
-      <section ref={testimonialsRef} className="py-20 container mx-auto px-4">
+      <section ref={testimonialsRef} className="py-20 container-wrapper">
         <motion.div
           className="text-center mb-16"
           initial="hidden"
