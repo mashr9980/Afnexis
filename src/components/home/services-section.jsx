@@ -56,9 +56,20 @@ export default function ServicesSection() {
   const isVisible = useIntersectionObserver({ ref: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-20 container-wrapper">
+    <section
+      ref={sectionRef}
+      className="py-20  w-full  relative overflow-hidden"
+    >
+      {/* Purplish gradient overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none ">
+          {/* Main rounded gradient blob */}
+          <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl transform translate-x-1/3 "></div>
+        </div>
+      </div>
+
       <div
-        className={`transition-all duration-1000 transform ${
+        className={`transition-all container-wrapper duration-1000 transform relative z-10 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -75,7 +86,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`bg-foreground border-none rounded-xl p-6 transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,195,0.3)] delay-${
+              className={`bg-foreground border-none rounded-xl p-6 transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(194,122,255,0.3)] delay-${
                 index * 100
               }`}
             >

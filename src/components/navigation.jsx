@@ -8,17 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * The Navigation component renders a responsive navigation bar
- * with both desktop and mobile menus. It utilizes hooks to manage
- * the state of the mobile menu and services dropdown, and handles
- * events for menu toggling and link navigation. The component
- * supports nested sub-items for the services section and uses
- * animations for smooth transitions.
- */
-
-/*******  65a9cb64-38db-43ca-a0df-8e8f125717aa  *******/
 export function Navigation() {
   const router = useRouter();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -135,7 +124,7 @@ export function Navigation() {
           {item.name}
           {pathname === item.href && (
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-4">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+              <div className="h-1.5 w-1.5 rounded-full bg-primary-foreground"></div>
             </div>
           )}
         </Link>
@@ -144,7 +133,7 @@ export function Navigation() {
   );
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background-black/80 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background-black/80 backdrop-blur-sm h-[80px]  ">
       <div className="max-w-full mx-auto px-4 ">
         <div className="flex items-center justify-between sm:justify-start h-20">
           <div className="flex-shrink-0">
@@ -193,7 +182,7 @@ export function Navigation() {
             className="md:hidden"
             ref={mobileMenuRef}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-foreground/80 backdrop-blur-sm sm:px-3">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.subItems ? (

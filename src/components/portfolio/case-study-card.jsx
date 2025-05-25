@@ -12,7 +12,7 @@ export default function CaseStudyCard({ study, isEven }) {
 
   return (
     <Card
-      className="bg-background border-none rounded-xl overflow-hidden transition-all duration-500 hover:shadow-[0_0_25px_rgba(0,255,195,0.2)]"
+      className="bg-foreground border-none rounded-xl overflow-hidden transition-all duration-500 hover:shadow-[0_0_25px_rgba(194,122,255,0.3)]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -60,11 +60,11 @@ export default function CaseStudyCard({ study, isEven }) {
             </ul>
           </div>
 
-          <Link href={study.link} className="mt-auto">
+          {/* <Link href={study.link} className="mt-auto">
             <Button className="bg-primary-foreground hover:bg-primary-foreground/90 text-background flex items-center gap-2">
               Read Full Case Study <ArrowRight className="h-4 w-4" />
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Card>

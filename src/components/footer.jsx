@@ -51,7 +51,7 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef} className="bg-[var(--section-bg)] py-12">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container-wrapper mx-auto ">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
           initial="hidden"
@@ -69,7 +69,7 @@ const Footer = () => {
               {/* Social icons would go here */}
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(0,255,195,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-[rgba(255,255,255,0.05)] flex items-center justify-center text-[var(--body-text)] hover:bg-[rgba(194,122,255,0.1)] hover:text-[var(--primary-accent)] transition-all duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> AI Solutions
@@ -139,7 +139,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Cloud Development
@@ -147,7 +147,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Web Development
@@ -155,7 +155,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/#services"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
                   <ArrowRight className="w-3 h-3 mr-2" /> Mobile Development
@@ -177,10 +177,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/career"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
-                  <ArrowRight className="w-3 h-3 mr-2" /> Careers
+                  <ArrowRight className="w-3 h-3 mr-2" /> Career
                 </Link>
               </li>
               <li>
@@ -193,10 +193,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/portfolio"
                   className="text-[var(--body-text)] hover:text-[var(--primary-accent)] transition-colors flex items-center"
                 >
-                  <ArrowRight className="w-3 h-3 mr-2" /> Blog
+                  <ArrowRight className="w-3 h-3 mr-2" /> Portfolio
                 </Link>
               </li>
             </ul>

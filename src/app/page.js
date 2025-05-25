@@ -1,79 +1,29 @@
-"use client";
+import Home from "@/components/home/home-page";
+import { generateMetadata } from "@/lib/seo";
+import React from "react";
 
-import Footer from "@/components/footer";
-import CTASection from "@/components/home/cta-section";
-import FeaturedProjectsSection from "@/components/home/featured-projects-section";
-import { HeroSection } from "@/components/home/hero";
-import IndustriesSection from "@/components/home/industries-section";
-import ServicesSection from "@/components/home/services-section";
-import TechStackSection from "@/components/home/tech-stack-section";
-import TestimonialsSection from "@/components/home/testimonials-section";
-import WhyChooseUsSection from "@/components/home/why-choose-us-section";
-import { Navigation } from "@/components/navigation";
+export const metadata = generateMetadata({
+  title: "Afnexis – Innovating Intelligence. Engineering the Future",
+  description:
+    "Transform your ideas into reality with our comprehensive AI-powered development platform. Leading the future of intelligent software solutions with cutting-edge technology.",
+  keywords: [
+    "AI development platform",
+    "artificial intelligence",
+    "software development",
+    "machine learning",
+    "web development",
+    "mobile app development",
+    "cloud solutions",
+    "digital transformation",
+    "intelligent software",
+    "automation tools",
+  ],
+  canonical: "/",
+  ogType: "website",
+});
 
-const testimonials = [
-  {
-    author: {
-      name: "Emma Thompson",
-      handle: "@emmaai",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    },
-    text: "Using this AI platform has transformed how we handle data analysis. The speed and accuracy are unprecedented.",
-    href: "https://twitter.com/emmaai",
-  },
-  {
-    author: {
-      name: "David Park",
-      handle: "@davidtech",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    },
-    text: "The API integration is flawless. We've reduced our development time by 60% since implementing this solution.",
-    href: "https://twitter.com/davidtech",
-  },
-  {
-    author: {
-      name: "Sofia Rodriguez",
-      handle: "@sofiaml",
-      avatar:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    },
-    text: "Finally, an AI tool that actually understands context! The accuracy in natural language processing is impressive.",
-  },
-];
+const Page = () => {
+  return <Home />;
+};
 
-export default function Home() {
-  return (
-    <main className="max-w-full overflow-x-hidden">
-      <HeroSection
-        title="Welcome to Our Platform"
-        subtitle={{
-          regular: "Transform your ideas into ",
-          gradient: "beautiful digital experiences",
-        }}
-        description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
-        ctaText="Get Started"
-        ctaHref="/signup"
-        gridOptions={{
-          angle: 65,
-          opacity: 0.4,
-          cellSize: 50,
-          lightLineColor: "#4a4a4a",
-          darkLineColor: "#2a2a2a",
-        }}
-      />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <FeaturedProjectsSection />
-      <TechStackSection />
-      <TestimonialsSection
-        title="Trusted by developers worldwide"
-        description="Join thousands of developers who are already building the future with our AI platform"
-        testimonials={testimonials}
-      />
-      <IndustriesSection />
-      <CTASection />
-    </main>
-  );
-}
+export default Page;

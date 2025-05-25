@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "title": "MediCore AI Diagnostic Platform",
+    "description": "Developed a machine learning solution using TensorFlow and Python that improved diagnostic accuracy by 35% for a leading healthcare provider. Implemented computer vision algorithms for medical imaging analysis.",
+    "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&crop=center",
+    "tags": ["AI", "Healthcare", "Machine Learning", "TensorFlow", "Python"],
+    "category": "AI",
+    "featured": true,
+    "link": "https://github.com/username/medicore-ai-diagnostic"
+  },
+  {
+    "id": 2,
+    "title": "FinanceFlow Cloud Migration",
+    "description": "Migrated legacy banking systems to AWS cloud infrastructure, reducing operational costs by 40% and improving system reliability. Implemented microservices architecture with Docker and Kubernetes.",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Cloud", "AWS", "Finance", "Docker", "Kubernetes"],
+    "category": "Cloud",
+    "featured": true,
+    "link": "https://github.com/username/financeflow-cloud-migration"
+  },
+  {
+    "id": 3,
+    "title": "ShopSmart Mobile Commerce",
+    "description": "Built a cross-platform mobile app using React Native that increased customer engagement by 60% and boosted sales by 25%. Integrated payment gateways and real-time inventory management.",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Mobile", "React Native", "E-commerce", "Payment Integration"],
+    "category": "Mobile",
+    "featured": true,
+    "link": "https://github.com/username/shopsmart-mobile-app"
+  },
+  {
+    "id": 4,
+    "title": "TraceChain Supply Management",
+    "description": "Implemented a blockchain-based supply chain tracking system using Ethereum and Solidity that improved transparency and reduced fraud by 45%. Features smart contracts for automated compliance.",
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Blockchain", "Supply Chain", "Web3", "Ethereum", "Solidity"],
+    "category": "Blockchain",
+    "featured": true,
+    "link": "https://github.com/username/tracechain-supply-management"
+  },
+  {
+    "id": 5,
+    "title": "ContentGenius AI Platform",
+    "description": "Created an AI-powered content generation tool using GPT-4 API that helped marketing teams increase productivity by 70%. Features automated SEO optimization and multi-language support.",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&crop=center",
+    "tags": ["AI", "Content", "Marketing", "GPT-4", "SEO"],
+    "category": "AI",
+    "featured": true,
+    "link": "https://github.com/username/contentgenius-ai-platform"
+  },
+  {
+    "id": 6,
+    "title": "SmartHome IoT Ecosystem",
+    "description": "Designed and implemented an IoT system for smart homes using Raspberry Pi and Arduino that reduced energy consumption by 30%. Features voice control and mobile app integration.",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center",
+    "tags": ["IoT", "Smart Home", "Energy", "Raspberry Pi", "Arduino"],
+    "category": "IoT",
+    "featured": true,
+    "link": "https://github.com/username/smarthome-iot-ecosystem"
+  },
+
+  {
+    "id": 8,
+    "title": "SalesForce Pro CRM",
+    "description": "Built a custom cloud-based CRM using Node.js and React that improved sales team efficiency by 55% for a B2B company. Features advanced analytics and automated lead scoring.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Cloud", "CRM", "B2B", "Node.js", "React"],
+    "category": "Cloud",
+    "featured": true,
+    "link": "https://github.com/username/salesforce-pro-crm"
+  },
+  {
+    "id": 9,
+    "title": "SecureID Blockchain Verification",
+    "description": "Created a blockchain-based identity verification system using Hyperledger Fabric that reduced fraud by 80% for a financial institution. Features biometric authentication and zero-knowledge proofs.",
+    "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Blockchain", "Identity", "Security", "Hyperledger", "Biometrics"],
+    "category": "Blockchain",
+    "featured": false,
+    "link": "https://github.com/username/secureid-blockchain-verification"
+  },
+  {
+    "id": 10,
+    "title": "IndustryWatch IoT Monitor",
+    "description": "Implemented an IoT solution for industrial equipment monitoring using LoRaWAN and AWS IoT that reduced downtime by 65%. Features predictive maintenance and real-time alerts.",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&crop=center",
+    "tags": ["IoT", "Industrial", "Monitoring", "LoRaWAN", "AWS IoT"],
+    "category": "IoT",
+    "featured": false,
+    "link": "https://github.com/username/industrywatch-iot-monitor"
+  },
+  {
+    "id": 11,
+    "title": "StreamAI Recommendation Engine",
+    "description": "Developed an AI recommendation engine using collaborative filtering and deep learning that increased user engagement by 45% for a streaming platform. Features real-time personalization.",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&crop=center",
+    "tags": [
+      "AI",
+      "Recommendations",
+      "Streaming",
+      "Deep Learning",
+      "Personalization"
+    ],
+    "category": "AI",
+    "featured": false,
+    "link": "https://github.com/username/streamai-recommendation-engine"
+  },
+  {
+    "id": 12,
+    "title": "FitTracker Health App",
+    "description": "Created a health tracking mobile app using Flutter and Firebase that helped users improve fitness metrics by an average of 30%. Features wearable device integration and social challenges.",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Mobile", "Health", "Fitness", "Flutter", "Firebase"],
+    "category": "Mobile",
+    "featured": false,
+    "link": "https://github.com/username/fittracker-health-app"
+  },
+  {
+    "id": 13,
+    "title": "DataViz Analytics Dashboard",
+    "description": "Built a comprehensive analytics dashboard using D3.js and Python that processes 10M+ data points daily. Features real-time visualization and automated reporting for enterprise clients.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
+    "tags": [
+      "Analytics",
+      "Data Visualization",
+      "D3.js",
+      "Python",
+      "Enterprise"
+    ],
+    "category": "AI",
+    "featured": false,
+    "link": "https://github.com/username/dataviz-analytics-dashboard"
+  },
+  {
+    "id": 14,
+    "title": "CloudSecure Infrastructure",
+    "description": "Designed a multi-cloud security infrastructure using Terraform and Ansible that achieved 99.9% uptime. Implemented zero-trust architecture and automated threat detection.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=center",
+    "tags": ["Cloud", "Security", "Infrastructure", "Terraform", "Ansible"],
+    "category": "Cloud",
+    "featured": false,
+    "link": "https://github.com/username/cloudsecure-infrastructure"
+  },
+  {
+    "id": 15,
+    "title": "VoiceBot AI Assistant",
+    "description": "Developed a voice-activated AI assistant using natural language processing that handles 95% of customer inquiries automatically. Features multi-language support and sentiment analysis.",
+    "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=600&fit=crop&crop=center",
+    "tags": ["AI", "Voice", "NLP", "Customer Service", "Automation"],
+    "category": "AI",
+    "featured": false,
+    "link": "https://github.com/username/voicebot-ai-assistant"
+  }
+]

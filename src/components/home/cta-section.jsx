@@ -44,7 +44,7 @@ export default function CTASection() {
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <Card className="bg-gradient-to-r from-[#161b22] to-[#1a2233] border-none rounded-[0px] p-10 md:p-16 text-center">
+      <Card className="bg-background border-none rounded-[0px] p-10 md:p-16 text-center">
         <motion.h2
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-headings font-['Poppins'] mb-6"
@@ -61,7 +61,7 @@ export default function CTASection() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          className="flex flex-col items-center  sm:flex-row justify-center gap-4"
         >
           <Link href={"/contact"}>
             <Button
@@ -72,7 +72,7 @@ export default function CTASection() {
               Book a Free Consultation
             </Button>
           </Link>
-          <Link href={"/contact"}>
+          <Link href={"/contact#contact-form"}>
             <Button
               variant="outline"
               size="lg"
