@@ -9,14 +9,14 @@
   {
     "name": "Sophia Rodriguez",
     "role": "Product Designer",
-    "image": "/assets/picture.jpg",
+    "image": "/assets/member-1.jpg",
     "quote": "The culture at Afnexis truly values creativity and innovation. I've grown tremendously as a designer here, and I appreciate how my ideas are always heard and respected.",
     "years": "2 years at Afnexis"
   },
   {
     "name": "Marcus Johnson",
     "role": "Full Stack Developer",
-    "image": "/assets/picture.jpg",
+    "image": "/assets/member-2.jpg",
     "quote": "The work-life balance and remote flexibility at Afnexis is unmatched. I can do my best work while still having time for my family and personal interests.",
     "years": "4 years at Afnexis"
   }

@@ -10,6 +10,7 @@ import TeamMember from "@/components/about/team-member";
 import CompanyValue from "@/components/about/company-value";
 import CTASection from "@/components/home/cta-section";
 import AnimatedCounter from "@/components/animated-counter";
+import Link from "next/link";
 
 export default function AboutPage() {
   const heroRef = useRef(null);
@@ -80,12 +81,14 @@ export default function AboutPage() {
             solutions.
           </motion.p>
           <motion.div variants={fadeIn}>
-            <Button
-              size="lg"
-              className="bg-primary-foreground hover:bg-primary-foreground/90 text-background font-medium rounded-xl px-8 py-6 text-lg"
-            >
-              Meet Our Team
-            </Button>
+            <Link href={"/contact#contact-form"}>
+              <Button
+                size="lg"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-background font-medium rounded-xl px-8 py-6 text-lg"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </section>
@@ -228,37 +231,37 @@ export default function AboutPage() {
             name="Alex Chen"
             position="Chief Executive Officer"
             bio="Former AI research lead with 15+ years in tech leadership, driving innovation and strategic growth."
-            image="/assets/picture.jpg"
+            image="/assets/member-6.jpg"
           />
           <TeamMember
             name="Sarah Johnson"
             position="Chief Technology Officer"
             bio="Cloud architecture expert who previously led development teams at major tech companies."
-            image="/assets/picture.jpg"
+            image="/assets/member-1.jpg"
           />
           <TeamMember
             name="Michael Rodriguez"
             position="VP of Engineering"
             bio="Full-stack development specialist with a passion for building scalable, efficient systems."
-            image="/assets/picture.jpg"
+            image="/assets/member-2.jpg"
           />
           <TeamMember
             name="Priya Patel"
             position="Director of AI Solutions"
             bio="PhD in Machine Learning with experience implementing AI in healthcare and finance sectors."
-            image="/assets/picture.jpg"
+            image="/assets/member-3.jpg"
           />
           <TeamMember
             name="David Kim"
             position="Head of Product Design"
             bio="Award-winning UX designer focused on creating intuitive, engaging user experiences."
-            image="/assets/picture.jpg"
+            image="/assets/member-4.jpg"
           />
           <TeamMember
             name="Emma Wilson"
             position="Director of Client Success"
             bio="Dedicated to ensuring our solutions deliver measurable business value for every client."
-            image="/assets/picture.jpg"
+            image="/assets/member-5.jpg"
           />
         </motion.div>
       </section>

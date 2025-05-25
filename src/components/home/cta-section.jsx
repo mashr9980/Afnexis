@@ -61,7 +61,7 @@ export default function CTASection() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          className="flex flex-col items-center  sm:flex-row justify-center gap-4"
         >
           <Link href={"/contact"}>
             <Button
@@ -72,7 +72,7 @@ export default function CTASection() {
               Book a Free Consultation
             </Button>
           </Link>
-          <Link href={"/contact"}>
+          <Link href={"/contact#contact-form"}>
             <Button
               variant="outline"
               size="lg"

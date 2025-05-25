@@ -264,7 +264,7 @@ const HeroSection = React.forwardRef(
       },
       description = "Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization with cutting-edge AI solutions.",
       ctaText = "Start Building",
-      ctaHref = "/contact",
+      ctaHref = "/contact#contact-form",
       backgroundType = "optimized-gif", // 'video', 'css', 'optimized-gif'
       gridOptions,
       ...props
@@ -325,7 +325,7 @@ const HeroSection = React.forwardRef(
         {backgroundType === "optimized-gif" && (
           <img
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
-            src="https://media.giphy.com/media/ITRemFlr5tS39AzQUL/giphy.gif"
+            src="/assets/new-hero.gif"
             alt="AI Animation"
             loading="lazy"
           />

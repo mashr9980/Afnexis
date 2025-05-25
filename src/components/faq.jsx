@@ -84,7 +84,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-32">
+    <section className="pt-12 pb-20 md:pt-40 md:pb-32">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection animation="slide-up" className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">

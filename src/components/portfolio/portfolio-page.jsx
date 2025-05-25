@@ -247,41 +247,50 @@ export default function PortfolioPage() {
       <section
         id="featured-projects"
         ref={projectsRef}
-        className="py-20 container-wrapper mx-auto "
+        className="py-20 relative overflow-hidden  "
       >
-        <motion.div
-          className="text-center mb-16"
-          initial="hidden"
-          animate={projectsVisible ? "visible" : "hidden"}
-          variants={fadeIn}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-headings font-['Poppins'] mb-6">
-            Featured Projects
-          </h2>
-          <p className="text-text max-w-3xl mx-auto mb-8">
-            Browse our portfolio of innovative solutions across various
-            technologies and industries.
-          </p>
-
-          <div className="relative max-w-md mx-auto mb-12">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text" />
-            <input
-              type="text"
-              placeholder="Search projects..."
-              className="w-full pl-10 py-3 bg-foreground border-none rounded-lg text-text focus:ring-primary-foreground focus:outline-none"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+        {/* Purplish gradient overlay */}
+        <div className="absolute inset-0 pointer-events-none  ">
+          <div className="absolute inset-0 pointer-events-none ">
+            {/* Main rounded gradient blob */}
+            <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl transform translate-x-1/3 "></div>
           </div>
-        </motion.div>
+        </div>
+        <div className="container-wrapper">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            animate={projectsVisible ? "visible" : "hidden"}
+            variants={fadeIn}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-headings font-['Poppins'] mb-6">
+              Projects
+            </h2>
+            <p className="text-text max-w-3xl mx-auto mb-8">
+              Browse our portfolio of innovative solutions across various
+              technologies and industries.
+            </p>
 
-        <motion.div
-          initial="hidden"
-          animate={projectsVisible ? "visible" : "hidden"}
-          variants={staggerContainer}
-        >
-          <CustomTabs tabs={projectTabs} defaultValue="all" />
-        </motion.div>
+            <div className="relative max-w-md mx-auto mb-12">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text" />
+              <input
+                type="text"
+                placeholder="Search projects..."
+                className="w-full pl-10 py-3 bg-foreground border-none rounded-lg text-text focus:ring-primary-foreground focus:outline-none"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            animate={projectsVisible ? "visible" : "hidden"}
+            variants={staggerContainer}
+          >
+            <CustomTabs tabs={projectTabs} defaultValue="all" />
+          </motion.div>
+        </div>
       </section>
 
       {/* Case Studies Section */}
@@ -290,7 +299,7 @@ export default function PortfolioPage() {
         ref={caseStudiesRef}
         className="py-20 bg-background"
       >
-        <div className="container-wrapper mx-auto ">
+        <div className="container-wrapper ">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
