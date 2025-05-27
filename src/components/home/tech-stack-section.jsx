@@ -179,7 +179,7 @@ export default function TechStackSection() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                className={`px-4 py-2 rounded-full card-border text-sm font-medium transition-all duration-300
                   ${
                     activeCategory === category
                       ? "bg-primary-foreground text-background"
@@ -203,7 +203,7 @@ export default function TechStackSection() {
               key={index}
               variants={itemVariants}
               className={`bg-foreground rounded-xl p-6 flex flex-col items-center text-center
-                transition-all duration-300 transform 
+                transition-all duration-300 transform card-border
                 ${
                   hoveredTech === index
                     ? "scale-110 shadow-[0_0_25px_rgba(194,122,255,0.3)]"

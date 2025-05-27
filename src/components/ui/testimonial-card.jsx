@@ -8,7 +8,7 @@ export function TestimonialCard({ author, text, href, className }) {
     <Card
       {...(href ? { href } : {})}
       className={cn(
-        "flex flex-col rounded-lg border-t",
+        "flex flex-col rounded-lg border-t ",
         "bg-foreground/10 border-foreground/20",
         "p-4 text-start sm:p-6",
         "hover:from-muted/60 hover:to-muted/20",

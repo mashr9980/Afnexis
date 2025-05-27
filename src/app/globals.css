@@ -127,6 +127,9 @@
     /*  GRADIENT OF CARDS */
     @apply bg-[linear-gradient(to_right,#0d1117,oklch(71.4%_0.203_305.504/0.15))];
   }
+  .card-border {
+    @apply border-[1px] border-solid border-white/10 shadow-xl;
+  }
 }
 
 body {

@@ -269,7 +269,7 @@ export default function PortfolioPage() {
               <input
                 type="text"
                 placeholder="Search projects..."
-                className="w-full pl-10 py-3 bg-foreground border-none rounded-lg text-text focus:ring-primary-foreground focus:outline-none"
+                className="w-full pl-10 py-3 bg-foreground card-border border-none rounded-lg text-text focus:ring-primary-foreground focus:outline-none"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -348,7 +348,7 @@ export default function PortfolioPage() {
         >
           {skills.map((skill, index) => (
             <motion.div key={index} variants={fadeIn} custom={index * 0.2}>
-              <Card className="bg-foreground border-none rounded-xl p-6 h-full hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300">
+              <Card className="bg-foreground card-border card-border rounded-xl p-6 h-full hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-background rounded-lg mr-4 text-primary-foreground">
                     {skill.icon}
@@ -384,7 +384,7 @@ export default function PortfolioPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
+              className="p-8 bg-foreground card-border rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={50}
@@ -397,7 +397,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
+              className="p-8 bg-foreground card-border rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={100}
@@ -410,7 +410,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
+              className="p-8 bg-foreground card-border rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={5}
@@ -423,7 +423,7 @@ export default function PortfolioPage() {
             </motion.div>
             <motion.div
               variants={fadeIn}
-              className="p-8 bg-foreground rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
+              className="p-8 bg-foreground card-border rounded-xl hover:shadow-[0_0_20px_rgba(194,122,255,0.3)] transition-all duration-300"
             >
               <AnimatedCounter
                 end={12}

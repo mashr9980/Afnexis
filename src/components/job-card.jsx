@@ -11,7 +11,7 @@ export default function JobCard({ job }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Card className="bg-foreground border-none rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(194,122,255,0.3)]">
+    <Card className="bg-foreground card-border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(194,122,255,0.3)]">
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-bold text-headings font-['Poppins']">
