@@ -71,7 +71,7 @@ export default function PricingSection() {
       className="bg-background text-white py-20 px-4 md:px-8"
     >
       <motion.div
-        className="w-[90%] mx-auto"
+        className="container-cards"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
