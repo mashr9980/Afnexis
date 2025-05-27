@@ -60,7 +60,7 @@ export default function PortfolioCard({ project }) {
 
   return (
     <Card
-      className="bg-foreground border-none rounded-xl overflow-hidden h-full transition-all duration-500 hover:shadow-[0_0_25px_rgba(194,122,255,0.3)]"
+      className="bg-foreground card-border rounded-xl overflow-hidden h-full transition-all duration-500 hover:shadow-[0_0_25px_rgba(194,122,255,0.3)]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

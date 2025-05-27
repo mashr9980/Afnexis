@@ -328,7 +328,7 @@ export default function CareersPage() {
             <Input
               type="text"
               placeholder="Search positions..."
-              className="pl-10 bg-foreground border-none text-text focus:ring-primary-foreground"
+              className="pl-10 bg-foreground card-border border-none text-text focus:ring-primary-foreground"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -372,7 +372,7 @@ export default function CareersPage() {
           >
             <motion.div
               variants={fadeIn}
-              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground card-border rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 1
@@ -389,7 +389,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground card-border rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 2
@@ -406,7 +406,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground card-border rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 3
@@ -423,7 +423,7 @@ export default function CareersPage() {
 
             <motion.div
               variants={fadeIn}
-              className="bg-foreground rounded-xl p-6 relative flex flex-col items-center text-center"
+              className="bg-foreground card-border rounded-xl p-6 relative flex flex-col items-center text-center"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary-foreground text-[#0d1117] w-8 h-8 rounded-full flex items-center justify-center font-bold">
                 4
@@ -465,7 +465,7 @@ export default function CareersPage() {
         >
           {testimonials.map((testimonial, index) => (
             <motion.div key={index} variants={fadeIn} custom={index * 0.2}>
-              <Card className="bg-foreground border-none rounded-xl overflow-hidden h-full">
+              <Card className="bg-foreground card-border card-border rounded-xl overflow-hidden h-full">
                 <div className="p-6">
                   <div className="flex items-center mb-6">
                     <div className="relative h-16 w-16 rounded-full overflow-hidden mr-4 border-2 border-primary-foreground">

@@ -68,7 +68,7 @@ export default function IndustriesSection() {
           {industries.map((industry, index) => (
             <Card
               key={index}
-              className={`bg-foreground border-none rounded-xl p-6 transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(194,122,255,0.3)] delay-${
+              className={`bg-foreground card-border rounded-xl p-6 transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(194,122,255,0.3)] delay-${
                 index * 100
               }`}
             >

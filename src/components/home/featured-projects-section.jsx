@@ -123,7 +123,7 @@ const FeaturedProjectsSection = () => {
                 >
                   <Card>
                     {/* Image Section - Fixed Height */}
-                    <div className="relative h-48 w-full flex-shrink-0">
+                    <div className="relative card-border h-48 w-full flex-shrink-0">
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
