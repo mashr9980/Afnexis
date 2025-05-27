@@ -82,15 +82,18 @@ const FeaturedProjectsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-12 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-12 relative overflow-hidden bg-card-container-gradient"
+    >
       {/* Purplish gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute inset-0 pointer-events-none ">
-          {/* Main rounded gradient blob */}
-          <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl transform translate-x-1/3 "></div>
+      {/* <div className="absolute inset-0 pointer-events-none -z-10">
+        <div className="absolute inset-0 pointer-events-none "> */}
+      {/* Main rounded gradient blob */}
+      {/* <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl transform translate-x-1/3 "></div>
         </div>
-      </div>
-      <div className="container-wrapper">
+      </div> */}
+      <div className="container-cards">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

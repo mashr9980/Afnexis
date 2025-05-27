@@ -247,16 +247,9 @@ export default function PortfolioPage() {
       <section
         id="featured-projects"
         ref={projectsRef}
-        className="py-20 relative overflow-hidden  "
+        className="py-20  overflow-hidden bg-card-container-gradient  "
       >
-        {/* Purplish gradient overlay */}
-        <div className="absolute inset-0 pointer-events-none  ">
-          <div className="absolute inset-0 pointer-events-none ">
-            {/* Main rounded gradient blob */}
-            <div className="absolute bottom-20 right-0 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl transform translate-x-1/3 "></div>
-          </div>
-        </div>
-        <div className="container-wrapper">
+        <div className="container-cards">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -299,7 +292,7 @@ export default function PortfolioPage() {
         ref={caseStudiesRef}
         className="py-20 bg-background"
       >
-        <div className="container-wrapper ">
+        <div className="container-cards ">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -331,7 +324,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Skills & Technologies Section */}
-      <section ref={skillsRef} className="py-20 container-wrapper mx-auto ">
+      <section ref={skillsRef} className="py-20 container-cards mx-auto ">
         <motion.div
           className="text-center mb-16"
           initial="hidden"
@@ -382,7 +375,7 @@ export default function PortfolioPage() {
 
       {/* Stats Section */}
       <section ref={statsRef} className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container-cards mx-auto ">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
             initial="hidden"

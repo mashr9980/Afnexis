@@ -145,7 +145,7 @@ export default function AboutPage() {
 
       {/* Our Values Section */}
       <section ref={valuesRef} className="py-20 bg-background">
-        <div className="container-wrapper mx-auto ">
+        <div className="container-cards mx-auto ">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -204,7 +204,7 @@ export default function AboutPage() {
       {/* Leadership Team Section */}
       <section
         ref={teamRef}
-        className="py-20 bg-background container-wrapper mx-auto "
+        className="py-20 bg-background container-cards mx-auto "
       >
         <motion.div
           className="text-center mb-16"
@@ -268,7 +268,7 @@ export default function AboutPage() {
 
       {/* Company Stats Section with Counter Animation */}
       <section ref={statsRef} className="py-20 bg-background">
-        <div className="container-wrapper">
+        <div className="container-cards">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
             initial="hidden"

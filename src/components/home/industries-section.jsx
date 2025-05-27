@@ -49,9 +49,9 @@ export default function IndustriesSection() {
   const isVisible = useIntersectionObserver({ ref: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-20 container-wrapper">
+    <section ref={sectionRef} className="py-20  bg-card-container-gradient">
       <div
-        className={`transition-all duration-1000 transform ${
+        className={`transition-all duration-1000 transform container-cards ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
