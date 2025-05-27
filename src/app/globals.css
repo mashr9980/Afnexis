@@ -119,6 +119,14 @@
   .container-wrapper {
     @apply w-[95%] mx-auto;
   }
+  .container-cards {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .bg-card-container-gradient {
+    /*  GRADIENT OF CARDS */
+    @apply bg-[linear-gradient(to_right,#0d1117,oklch(71.4%_0.203_305.504/0.15))];
+  }
 }
 
 body {

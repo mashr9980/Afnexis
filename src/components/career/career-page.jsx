@@ -241,8 +241,8 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits Section */}
-      <section ref={benefitsRef} className="py-20 bg-background">
-        <div className="container-wrapper">
+      <section ref={benefitsRef} className="py-20 bg-card-container-gradient">
+        <div className="container-cards">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -307,7 +307,7 @@ export default function CareersPage() {
       <section
         id="open-positions"
         ref={openingsRef}
-        className="py-20 container-wrapper"
+        className="py-20 container-cards"
       >
         <motion.div
           className="text-center mb-16"
@@ -346,8 +346,8 @@ export default function CareersPage() {
       </section>
 
       {/* Application Process Section */}
-      <section ref={processRef} className="py-20 bg-background">
-        <div className="container-wrapper">
+      <section ref={processRef} className="py-20 bg-card-container-gradient">
+        <div className="container-cards">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
