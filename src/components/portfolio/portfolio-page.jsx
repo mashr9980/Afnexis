@@ -24,8 +24,14 @@ export default function PortfolioPage() {
   const skillsRef = useRef(null);
   const statsRef = useRef(null);
 
+  const projectsObserverOptions = {
+    ref: projectsRef,
+    threshold: 0.1,
+    rootMargin: "0px 0px -10% 0px",
+  };
+  const projectsVisible = useIntersectionObserver(projectsObserverOptions);
+
   const heroVisible = useIntersectionObserver({ ref: heroRef });
-  const projectsVisible = useIntersectionObserver({ ref: projectsRef });
   const caseStudiesVisible = useIntersectionObserver({ ref: caseStudiesRef });
   const skillsVisible = useIntersectionObserver({ ref: skillsRef });
   const statsVisible = useIntersectionObserver({ ref: statsRef });
@@ -80,7 +86,7 @@ export default function PortfolioPage() {
 
   // Create project grid for each category
   const createProjectGrid = (projectList) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {projectList.map((project) => (
         <motion.div key={project.id} variants={fadeIn}>
           <PortfolioCard project={project} />
@@ -190,12 +196,12 @@ export default function PortfolioPage() {
         <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-gradient rounded-full blur-3xl opacity-30 animate-float-slow"></div>
         <div className="absolute top-3/4 right-1/4 w-64 h-64 bg-radial-teal rounded-full blur-2xl opacity-40 animate-float-delayed"></div>
         <div className="absolute top-1/2 left-3/4 w-80 h-80 bg-mesh-gradient rounded-full blur-3xl opacity-25 animate-float"></div>
-        
+
         {/* Floating teal particles */}
         <div className="absolute top-1/5 left-1/3 w-4 h-4 bg-teal-500 rounded-full animate-teal-pulse opacity-60"></div>
         <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-teal-300 rounded-full animate-teal-pulse animation-delay-1000 opacity-50"></div>
         <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-teal-400 rounded-full animate-teal-pulse animation-delay-2000 opacity-70"></div>
-        
+
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-grid-teal opacity-10"></div>
       </div>
@@ -222,7 +228,10 @@ export default function PortfolioPage() {
               variants={fadeIn}
               className="text-4xl md:text-6xl font-bold text-headings font-['Poppins'] mb-6"
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Portfolio</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                Portfolio
+              </span>
             </motion.h1>
             <motion.p
               variants={fadeIn}
@@ -265,13 +274,13 @@ export default function PortfolioPage() {
         <section
           id="featured-projects"
           ref={projectsRef}
-          className="py-20 overflow-hidden bg-mesh-gradient"
+          className="py-20 overflow-hidden bg-mesh-gradient min-h-[50vh]"
         >
-          <div className="container-cards">
+          <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial="hidden"
-              animate={projectsVisible ? "visible" : "hidden"}
+              initial="visible"
+              animate={projectsVisible ? "visible" : "visible"}
               variants={fadeIn}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-headings font-['Poppins'] mb-6">
@@ -282,8 +291,8 @@ export default function PortfolioPage() {
                 technologies and industries.
               </p>
 
-              <div className="relative max-w-md mx-auto mb-12">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-teal-400" />
+              <div className="relative max-w-md mx-auto mb-12 px-4">
+                <Search className="absolute left-7 top-1/2 transform -translate-y-1/2 text-teal-400" />
                 <input
                   type="text"
                   placeholder="Search projects..."
@@ -296,8 +305,9 @@ export default function PortfolioPage() {
 
             <motion.div
               initial="hidden"
-              animate={projectsVisible ? "visible" : "hidden"}
+              animate={projectsVisible ? "visible" : "visible"}
               variants={staggerContainer}
+              className="w-full overflow-x-hidden"
             >
               <CustomTabs tabs={projectTabs} defaultValue="all" />
             </motion.div>
@@ -334,7 +344,11 @@ export default function PortfolioPage() {
               variants={staggerContainer}
             >
               {caseStudies.map((study, index) => (
-                <motion.div key={study.id} variants={fadeIn} custom={index * 0.2}>
+                <motion.div
+                  key={study.id}
+                  variants={fadeIn}
+                  custom={index * 0.2}
+                >
                   <CaseStudyCard study={study} isEven={index % 2 === 0} />
                 </motion.div>
               ))}
@@ -343,7 +357,10 @@ export default function PortfolioPage() {
         </section>
 
         {/* Skills & Technologies Section */}
-        <section ref={skillsRef} className="py-20 container-cards mx-auto relative">
+        <section
+          ref={skillsRef}
+          className="py-20 container-cards mx-auto relative"
+        >
           <div className="absolute inset-0 bg-radial-teal opacity-20"></div>
           <motion.div
             className="text-center mb-16 relative z-10"
@@ -415,7 +432,9 @@ export default function PortfolioPage() {
                   delay={0}
                   className="text-5xl font-bold text-teal-400 font-['Poppins'] mb-2 flex items-center justify-center relative z-10"
                 />
-                <div className="text-text font-medium relative z-10">Team Members</div>
+                <div className="text-text font-medium relative z-10">
+                  Team Members
+                </div>
               </motion.div>
               <motion.div
                 variants={fadeIn}
@@ -429,7 +448,9 @@ export default function PortfolioPage() {
                   delay={200}
                   className="text-5xl font-bold text-teal-400 font-['Poppins'] mb-2 flex items-center justify-center relative z-10"
                 />
-                <div className="text-text font-medium relative z-10">Projects Delivered</div>
+                <div className="text-text font-medium relative z-10">
+                  Projects Delivered
+                </div>
               </motion.div>
               <motion.div
                 variants={fadeIn}
@@ -443,7 +464,9 @@ export default function PortfolioPage() {
                   delay={400}
                   className="text-5xl font-bold text-teal-400 font-['Poppins'] mb-2 flex items-center justify-center relative z-10"
                 />
-                <div className="text-text font-medium relative z-10">Years in Business</div>
+                <div className="text-text font-medium relative z-10">
+                  Years in Business
+                </div>
               </motion.div>
               <motion.div
                 variants={fadeIn}
@@ -457,7 +480,9 @@ export default function PortfolioPage() {
                   delay={600}
                   className="text-5xl font-bold text-teal-400 font-['Poppins'] mb-2 flex items-center justify-center relative z-10"
                 />
-                <div className="text-text font-medium relative z-10">Countries Served</div>
+                <div className="text-text font-medium relative z-10">
+                  Countries Served
+                </div>
               </motion.div>
             </motion.div>
           </div>

@@ -58,12 +58,15 @@ const Footer = () => {
           animate={isVisible ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          <motion.div className="md:col-span-1" variants={columnVariants}>
+          <motion.div
+            className="md:col-span-1 flex flex-col items-center"
+            variants={columnVariants}
+          >
             <div className="text-[var(--headings-text)] text-2xl font-bold mb-4">
               <Link href="/" className="flex items-center">
-                <img 
-                  src="/logo.png" 
-                  alt="Afnexis Logo" 
+                <img
+                  src="/logo.png"
+                  alt="Afnexis Logo"
                   className="h-24 w-auto hover:scale-[1.1] transition-transform duration-500"
                 />
               </Link>
