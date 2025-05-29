@@ -60,10 +60,16 @@ const Footer = () => {
         >
           <motion.div className="md:col-span-1" variants={columnVariants}>
             <div className="text-[var(--headings-text)] text-2xl font-bold mb-4">
-              <span className="text-[var(--primary-accent)]">Afnexis</span>
+              <Link href="/" className="flex items-center">
+                <img 
+                  src="/logo.png" 
+                  alt="Afnexis Logo" 
+                  className="h-24 w-auto hover:scale-[1.1] transition-transform duration-500"
+                />
+              </Link>
             </div>
             <p className="text-[var(--body-text)] mb-4">
-              Innovating Intelligence. Engineering the Future.
+              Innovating Intelligence.
             </p>
             <div className="flex space-x-4">
               {/* Social icons would go here */}

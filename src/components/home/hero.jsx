@@ -9,8 +9,8 @@ const RetroGrid = ({
   angle = 65,
   cellSize = 60,
   opacity = 0.5,
-  lightLineColor = "gray",
-  darkLineColor = "gray",
+  lightLineColor = "#14b8a6",
+  darkLineColor = "#0d9488",
 }) => {
   const gridStyles = {
     "--grid-angle": `${angle}deg`,
@@ -36,91 +36,19 @@ const RetroGrid = ({
   );
 };
 
-// Working optimized video background component
-const OptimizedVideoBackground = ({ videoSrc, posterSrc, opacity = 0.3 }) => {
-  const videoRef = useRef(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleLoadedData = () => {
-      setIsLoaded(true);
-      video.play().catch(() => {
-        // Autoplay failed, but video is still loaded
-      });
-    };
-
-    const handleError = () => {
-      setHasError(true);
-    };
-
-    video.addEventListener("loadeddata", handleLoadedData);
-    video.addEventListener("error", handleError);
-
-    return () => {
-      video.removeEventListener("loadeddata", handleLoadedData);
-      video.removeEventListener("error", handleError);
-    };
-  }, []);
-
-  if (hasError) {
-    return (
-      <img
-        className={`absolute inset-0 w-full h-full object-cover z-0`}
-        style={{ opacity }}
-        src={posterSrc || "/placeholder.svg"}
-        alt="AI Background"
-      />
-    );
-  }
-
-  return (
-    <>
-      {/* Poster image shown while video loads */}
-      {!isLoaded && (
-        <img
-          className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500`}
-          style={{ opacity }}
-          src={posterSrc || "/placeholder.svg"}
-          alt="AI Background"
-        />
-      )}
-
-      {/* Optimized video */}
-      <video
-        ref={videoRef}
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-500 ${
-          isLoaded ? `opacity-[${opacity * 30}]` : "opacity-0"
-        }`}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        poster={posterSrc}
-      >
-        <source src={"/assets/final.mp4"} type="video/mp4" />
-      </video>
-    </>
-  );
-};
-
-// Advanced AI-themed CSS animation background
+// Enhanced AI-themed CSS animation background with teal colors
 const AIAnimatedBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/15 to-indigo-900/20" />
+      {/* Base gradient with teal theme */}
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-teal-800/15 to-cyan-900/20" />
 
       {/* Animated neural network */}
       <div className="absolute inset-0">
-        {/* Large floating orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/8 to-cyan-500/8 rounded-full blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-3/4 w-48 h-48 bg-gradient-to-r from-indigo-500/12 to-purple-500/12 rounded-full blur-2xl animate-float" />
+        {/* Large floating orbs with teal colors */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/8 to-teal-400/8 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute top-1/2 left-3/4 w-48 h-48 bg-gradient-to-r from-teal-600/12 to-emerald-500/12 rounded-full blur-2xl animate-float" />
 
         {/* Neural network connections */}
         <svg
@@ -135,9 +63,9 @@ const AIAnimatedBackground = () => {
               x2="100%"
               y2="100%"
             >
-              <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#3B82F6" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#5eead4" stopOpacity="0.4" />
             </linearGradient>
             <linearGradient
               id="neuralGradient2"
@@ -146,8 +74,8 @@ const AIAnimatedBackground = () => {
               x2="0%"
               y2="100%"
             >
-              <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#EF4444" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#0d9488" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#2dd4bf" stopOpacity="0.4" />
             </linearGradient>
             <filter id="glow">
               <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -158,7 +86,7 @@ const AIAnimatedBackground = () => {
             </filter>
           </defs>
 
-          {/* Animated neural pathways */}
+          {/* Animated neural pathways with teal colors */}
           <g className="animate-pulse">
             <path
               d="M100,200 Q300,100 500,200 T900,300"
@@ -186,13 +114,13 @@ const AIAnimatedBackground = () => {
             />
           </g>
 
-          {/* AI processing nodes */}
+          {/* AI processing nodes with teal colors */}
           <g>
             <circle
               cx="100"
               cy="200"
               r="6"
-              fill="#8B5CF6"
+              fill="#14b8a6"
               filter="url(#glow)"
               className="animate-neural-pulse"
             />
@@ -200,7 +128,7 @@ const AIAnimatedBackground = () => {
               cx="500"
               cy="200"
               r="8"
-              fill="#3B82F6"
+              fill="#06b6d4"
               filter="url(#glow)"
               className="animate-neural-pulse animation-delay-500"
             />
@@ -208,7 +136,7 @@ const AIAnimatedBackground = () => {
               cx="900"
               cy="300"
               r="5"
-              fill="#06B6D4"
+              fill="#5eead4"
               filter="url(#glow)"
               className="animate-neural-pulse animation-delay-1000"
             />
@@ -216,7 +144,7 @@ const AIAnimatedBackground = () => {
               cx="200"
               cy="800"
               r="7"
-              fill="#F59E0B"
+              fill="#0d9488"
               filter="url(#glow)"
               className="animate-neural-pulse animation-delay-1500"
             />
@@ -224,7 +152,7 @@ const AIAnimatedBackground = () => {
               cx="600"
               cy="700"
               r="6"
-              fill="#EF4444"
+              fill="#2dd4bf"
               filter="url(#glow)"
               className="animate-neural-pulse animation-delay-2000"
             />
@@ -232,22 +160,22 @@ const AIAnimatedBackground = () => {
         </svg>
       </div>
 
-      {/* Data particles */}
+      {/* Data particles with teal colors */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-purple-400 rounded-full animate-ping" />
-        <div className="absolute top-2/3 right-1/5 w-1 h-1 bg-blue-400 rounded-full animate-ping animation-delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping animation-delay-2000" />
-        <div className="absolute top-1/4 right-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-ping animation-delay-3000" />
-        <div className="absolute top-3/4 left-2/3 w-2 h-2 bg-purple-300 rounded-full animate-ping animation-delay-4000" />
+        <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-teal-400 rounded-full animate-ping" />
+        <div className="absolute top-2/3 right-1/5 w-1 h-1 bg-cyan-400 rounded-full animate-ping animation-delay-1000" />
+        <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-teal-300 rounded-full animate-ping animation-delay-2000" />
+        <div className="absolute top-1/4 right-1/3 w-1 h-1 bg-emerald-400 rounded-full animate-ping animation-delay-3000" />
+        <div className="absolute top-3/4 left-2/3 w-2 h-2 bg-teal-500 rounded-full animate-ping animation-delay-4000" />
       </div>
 
-      {/* Matrix-style data rain effect */}
+      {/* Matrix-style data rain effect with teal colors */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/6 w-px h-full bg-gradient-to-b from-transparent via-green-400 to-transparent animate-data-rain" />
-        <div className="absolute top-0 left-2/6 w-px h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent animate-data-rain animation-delay-1000" />
-        <div className="absolute top-0 left-3/6 w-px h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent animate-data-rain animation-delay-2000" />
-        <div className="absolute top-0 left-4/6 w-px h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-data-rain animation-delay-3000" />
-        <div className="absolute top-0 left-5/6 w-px h-full bg-gradient-to-b from-transparent via-indigo-400 to-transparent animate-data-rain animation-delay-4000" />
+        <div className="absolute top-0 left-1/6 w-px h-full bg-gradient-to-b from-transparent via-teal-400 to-transparent animate-data-rain" />
+        <div className="absolute top-0 left-2/6 w-px h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-data-rain animation-delay-1000" />
+        <div className="absolute top-0 left-3/6 w-px h-full bg-gradient-to-b from-transparent via-teal-500 to-transparent animate-data-rain animation-delay-2000" />
+        <div className="absolute top-0 left-4/6 w-px h-full bg-gradient-to-b from-transparent via-emerald-400 to-transparent animate-data-rain animation-delay-3000" />
+        <div className="absolute top-0 left-5/6 w-px h-full bg-gradient-to-b from-transparent via-teal-300 to-transparent animate-data-rain animation-delay-4000" />
       </div>
     </div>
   );
@@ -265,45 +193,12 @@ const HeroSection = React.forwardRef(
       description = "Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization with cutting-edge AI solutions.",
       ctaText = "Start Building",
       ctaHref = "/contact#contact-form",
-      backgroundType = "optimized-gif", // 'video', 'css', 'optimized-gif'
+      backgroundType = "css", // Using CSS animations for better teal integration
       gridOptions,
       ...props
     },
     ref
   ) => {
-    // Working video sources (these are confirmed working)
-    const videoSources = {
-      // Option 1: Pexels AI/Tech videos (free, no CORS issues)
-      ai_abstract:
-        "https://videos.pexels.com/video-files/3129957/3129957-uhd_3840_2160_25fps.mp4",
-      neural_network:
-        "https://videos.pexels.com/video-files/3130284/3130284-uhd_3840_2160_25fps.mp4",
-      data_visualization:
-        "https://videos.pexels.com/video-files/3141207/3141207-uhd_3840_2160_25fps.mp4",
-
-      // Option 2: Coverr videos (free, optimized)
-      tech_particles: "https://coverr-main.s3.amazonaws.com/mp4/Particles.mp4",
-      digital_wave: "https://coverr-main.s3.amazonaws.com/mp4/Digital-Wave.mp4",
-
-      // Option 3: Your own optimized videos (recommended)
-      custom_ai: "/assets/ai-background-optimized.mp4",
-    };
-
-    const posterImages = {
-      ai_abstract:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop&crop=center",
-      neural_network:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&h=1080&fit=crop&crop=center",
-      data_visualization:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&h=1080&fit=crop&crop=center",
-      tech_particles:
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1920&h=1080&fit=crop&crop=center",
-      digital_wave:
-        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1920&h=1080&fit=crop&crop=center",
-      custom_ai:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop&crop=center",
-    };
-
     return (
       <div
         className={cn("relative max-w-full overflow-hidden", className)}
@@ -311,51 +206,40 @@ const HeroSection = React.forwardRef(
         {...props}
         style={{ height: "calc(100vh)" }}
       >
-        {/* Background based on type */}
-        {backgroundType === "video" && (
-          <OptimizedVideoBackground
-            videoSrc={videoSources.custom_ai} // Use your own optimized video
-            posterSrc={posterImages.custom_ai}
-            opacity={0.3}
-          />
-        )}
+        {/* Enhanced background with teal theme */}
+        <AIAnimatedBackground />
 
-        {backgroundType === "css" && <AIAnimatedBackground />}
+        {/* Enhanced gradient overlay with teal accents */}
+        <div className="absolute top-0 z-[0] h-full w-screen bg-teal-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(20,184,166,0.3),rgba(255,255,255,0))]" />
 
-        {backgroundType === "optimized-gif" && (
-          <img
-            className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
-            src="/assets/new-hero.gif"
-            alt="AI Animation"
-            loading="lazy"
-          />
-        )}
+        {/* Additional teal glow effects */}
+        <div className="absolute inset-0 z-[1]">
+          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl animate-teal-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-cyan-500/15 rounded-full blur-2xl animate-teal-glow"></div>
+        </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute top-0 z-[0] h-full w-screen bg-purple-950/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-
-        <section className="relative max-w-full h-full mx-auto z-1">
+        <section className="relative max-w-full h-full mx-auto z-10">
           <RetroGrid {...gridOptions} />
           <div className="w-[90%] h-full flex items-center justify-center z-10 mx-auto px-4 py-28 gap-12 md:px-8">
             <div className="space-y-5 max-w-3xl mx-auto text-center">
-              <h1 className="text-sm text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr to-transparent from-zinc-300/5 via-gray-400/5 border-[2px] border-white/5 rounded-3xl w-fit">
+              <h1 className="text-sm text-gray-400 group font-geist mx-auto px-5 py-2 bg-gradient-to-tr to-transparent from-zinc-300/5 via-teal-400/10 border-[2px] border-teal-500/20 rounded-3xl w-fit hover:border-teal-400/30 transition-all duration-300">
                 {title}
                 <ChevronRight className="inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
               </h1>
               <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                 {subtitle.regular}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-orange-200">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-emerald-300">
                   {subtitle.gradient}
                 </span>
               </h2>
               <p className="max-w-2xl mx-auto text-gray-300">{description}</p>
               <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                 <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#5eead4_0%,#14b8a6_50%,#5eead4_100%)]" />
                   <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 text-xs font-medium backdrop-blur-3xl">
                     <a
                       href={ctaHref}
-                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr to-transparent from-zinc-300/5 via-purple-400/20 text-white border-input border-[1px] hover:bg-gradient-to-tr hover:to-transparent hover:from-zinc-300/10 hover:via-purple-400/30 transition-all sm:w-auto py-4 px-10"
+                      className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr to-transparent from-zinc-300/5 via-teal-400/20 text-white border-input border-[1px] hover:bg-gradient-to-tr hover:to-transparent hover:from-zinc-300/10 hover:via-teal-400/30 hover:shadow-lg hover:shadow-teal-500/25 transition-all sm:w-auto py-4 px-10"
                     >
                       {ctaText}
                     </a>

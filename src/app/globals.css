@@ -9,10 +9,9 @@
   --font-fira-code: "Fira Code", monospace;
   --primary-bg: #0d1117;
   --section-bg: #161b22;
-  --primary-accent: oklch(71.4% 0.203 305.504);
-  /* --primary-accent: #00ffc3; */
-  /* --secondary-accent: #4fd1c5; */
-  --secondary-accent: oklch(82.7% 0.119 306.383);
+  /* Updated teal color scheme */
+  --primary-accent: #14b8a6; /* Teal-500 */
+  --secondary-accent: #5eead4; /* Teal-300 */
   --headings-text: #f0f6fc;
   --body-text: #8b949e;
   --radius: 0.625rem;
@@ -124,12 +123,71 @@
   }
 
   .bg-card-container-gradient {
-    /*  GRADIENT OF CARDS */
-    @apply bg-[linear-gradient(to_right,#0d1117,oklch(71.4%_0.203_305.504/0.15))];
+    /* Updated gradient with teal theme */
+    @apply bg-[linear-gradient(to_right,#0d1117,rgba(20,184,166,0.15))];
   }
+  
+  /* New gradient utilities for enhanced backgrounds */
+  .bg-teal-gradient {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(94, 234, 212, 0.05) 100%);
+  }
+  
+  .bg-radial-teal {
+    background: radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+  }
+  
+  .bg-mesh-gradient {
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(94, 234, 212, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(45, 212, 191, 0.2) 0%, transparent 50%);
+  }
+  
+  .bg-animated-gradient {
+    background: linear-gradient(-45deg, #0d1117, rgba(20, 184, 166, 0.1), rgba(94, 234, 212, 0.1), #161b22);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
   .card-border {
     @apply border-[1px] border-solid border-white/10 shadow-xl;
   }
+  
+  /* Enhanced hover effects with teal theme */
+  .card-hover-teal {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover-teal:hover {
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Background pattern utilities */
+.bg-dots-teal {
+  background-image: radial-gradient(circle, rgba(20, 184, 166, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-teal {
+  background-image: 
+    linear-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 184, 166, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 body {
@@ -184,7 +242,7 @@ pre {
   border-color: var(--secondary-accent);
 }
 
-/* Button styles */
+/* Button styles with teal theme */
 .btn-primary {
   background-color: var(--primary-accent);
   color: var(--primary-bg);
@@ -195,8 +253,9 @@ pre {
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  background-color: #0d9488; /* Darker teal */
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
 }
 
 .btn-secondary {
@@ -210,7 +269,8 @@ pre {
 }
 
 .btn-secondary:hover {
-  background-color: rgba(79, 209, 197, 0.1);
+  background-color: rgba(20, 184, 166, 0.1);
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.2);
 }
 
 /* Card styles */
@@ -303,8 +363,8 @@ pre {
 .animate-fadeInLeft {
   animation: fadeInLeft 0.5s ease-out forwards;
 }
-/* Enhanced AI animations */
 
+/* Enhanced AI animations with teal theme */
 @keyframes draw {
   0% {
     stroke-dasharray: 0 1000;
@@ -378,6 +438,29 @@ pre {
   }
 }
 
+/* Teal-themed particle animations */
+@keyframes teal-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
+  }
+}
+
+@keyframes teal-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.6), 0 0 35px rgba(94, 234, 212, 0.4);
+  }
+}
+
 .animate-draw {
   animation: draw 4s ease-in-out infinite;
   stroke-dasharray: 1000;
@@ -401,6 +484,14 @@ pre {
 
 .animate-data-rain {
   animation: data-rain 8s linear infinite;
+}
+
+.animate-teal-pulse {
+  animation: teal-pulse 2s ease-in-out infinite;
+}
+
+.animate-teal-glow {
+  animation: teal-glow 3s ease-in-out infinite;
 }
 
 .animation-delay-500 {

@@ -3,7 +3,13 @@ import { generateMetadata } from "@/lib/seo";
 import React from "react";
 
 export const metadata = generateMetadata({
-  title: "Afnexis – Innovating Intelligence. Engineering the Future",
+  title: "Afnexis ~ Innovating Intelligence",
+  icons: {
+  icon: [
+    { url: "/logo.png", type: "image/png" },
+    { url: "/favicon.ico", type: "image/x-icon" },
+  ],
+},
   description:
     "Transform your ideas into reality with our comprehensive AI-powered development platform. Leading the future of intelligent software solutions with cutting-edge technology.",
   keywords: [

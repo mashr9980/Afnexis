@@ -139,9 +139,11 @@ export function Navigation() {
           <div className="flex-shrink-0">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <h2 className="bg-primary-foreground rounded-full px-8 py-2 !text-[#000000]  font-bold text-lg hover:scale-[1.1] transition-transform duration-500">
-                Afnexis
-              </h2>
+              <img 
+                src="/logo.png" 
+                alt="Afnexis Logo" 
+                className="h-16 w-auto hover:scale-[1.1] transition-transform duration-500"
+              />
             </Link>
           </div>
 
