@@ -60,11 +60,11 @@ export default function PortfolioPage() {
     id: project.id,
     title: project.title,
     description: project.description,
-    image: project.image || "/assets/med.jfif",
+    image: project.image,
     category: project.category,
     tags: project.tags,
     featured: project.featured,
-    link: project.link || "/assets/med.jfif",
+    link: project.link,
   }));
 
   // Filter projects based on search query
