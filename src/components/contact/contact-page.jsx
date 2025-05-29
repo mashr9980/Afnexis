@@ -9,6 +9,9 @@ import FAQ from "@/components/faq";
 import { HeroSection } from "@/components/home/hero";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
+import { Button } from "../ui/button";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 // EmailJS Configuration
 const EMAILJS_SERVICEID = "service_725k5hf";
@@ -16,6 +19,7 @@ const EMAILJS_TEMPLATEID = "template_g3zjzwa";
 const EMAILJS_PUBLICKEY = "ZnSWMoxvcPsTZQ6bu";
 
 export default function Contact() {
+  const heroRef = useRef(null);
   const [formState, setFormState] = useState({
     submitted: false,
     loading: false,
@@ -23,6 +27,30 @@ export default function Contact() {
 
   const formRef = useRef(null);
 
+  const heroVisible = useIntersectionObserver({ ref: heroRef });
+
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState((prev) => ({ ...prev, loading: true }));
@@ -68,35 +96,63 @@ export default function Contact() {
         <div className="absolute inset-0 bg-mesh-gradient opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-teal-500/10 to-transparent"></div>
         <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-radial-teal opacity-30"></div>
-        
+
         {/* Floating elements */}
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-teal-400/10 rounded-full blur-3xl animate-float-slow"></div>
         <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-cyan-400/15 rounded-full blur-2xl animate-float-delayed"></div>
-        
+
         {/* Teal particles */}
         <div className="absolute top-1/5 left-1/6 w-3 h-3 bg-teal-400 rounded-full animate-teal-pulse opacity-60"></div>
         <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-teal-glow opacity-50"></div>
         <div className="absolute top-1/2 left-3/4 w-4 h-4 bg-teal-500 rounded-full animate-teal-pulse animation-delay-1000 opacity-40"></div>
       </div>
-      
+
       <div className="relative z-10">
-        <HeroSection
-          title="Contact Us"
-          subtitle={{
-            regular: " Get in Touch ",
-            gradient: " Let's Create Something  Amazing Together",
-          }}
-          description="Transform your ideas into reality with our comprehensive suite of development tools and resources."
-          ctaText="Contact Us"
-          ctaHref="/contact#contact-form"
-          gridOptions={{
-            angle: 65,
-            opacity: 0.4,
-            cellSize: 50,
-            lightLineColor: "#14b8a6",
-            darkLineColor: "#0d9488",
-          }}
-        />
+        {/* Hero Section */}
+        <section
+          className="relative h-screen flex items-center justify-center overflow-hidden"
+          ref={heroRef}
+        >
+          {/* Background with gradient overlay */}
+          <div className="absolute inset-0 bg-[url('/assets/contact.jpg')] bg-cover bg-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117]/80 via-[#0d1117]/90 to-[#0d1117]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-transparent to-cyan-500/10"></div>
+          </div>
+
+          <motion.div
+            className="container-wrapper relative z-10 text-center"
+            initial="hidden"
+            animate={heroVisible ? "visible" : "hidden"}
+            variants={staggerContainer}
+          >
+            <motion.h1
+              className="text-4xl md:text-6xl font-bold text-headings font-['Poppins'] mb-6"
+              variants={fadeIn}
+            >
+              Get in{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                Touch
+              </span>
+            </motion.h1>
+            <motion.p
+              className="text-lg md:text-xl text-text max-w-3xl mx-auto mb-8"
+              variants={fadeIn}
+            >
+              Transform your ideas into reality with our comprehensive suite of
+              development tools and resources.
+            </motion.p>
+            <motion.div variants={fadeIn}>
+              <Link href="/contact#contact-form">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-medium rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </section>
 
         {/* Contact Form Section */}
         <section
@@ -105,7 +161,7 @@ export default function Contact() {
         >
           {/* Section background with teal gradient */}
           <div className="absolute inset-0 bg-animated-gradient opacity-30"></div>
-          
+
           <div className="container-wrapper relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <AnimatedSection
@@ -123,9 +179,9 @@ export default function Contact() {
                       Tell Us About Your Project
                     </h2>
                     <p className="text-[var(--body-text)] mb-8">
-                      Fill out the form with details about your project, and our team
-                      will get back to you to discuss how we can bring your vision to
-                      life.
+                      Fill out the form with details about your project, and our
+                      team will get back to you to discuss how we can bring your
+                      vision to life.
                     </p>
 
                     <div className="space-y-6 mb-8">
@@ -136,10 +192,12 @@ export default function Contact() {
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-lg font-bold mb-1 text-white group-hover:text-teal-300 transition-colors duration-300">Quick Response</h4>
+                          <h4 className="text-lg font-bold mb-1 text-white group-hover:text-teal-300 transition-colors duration-300">
+                            Quick Response
+                          </h4>
                           <p className="text-[var(--body-text)]">
-                            We respond to all inquiries within 24 hours on business
-                            days.
+                            We respond to all inquiries within 24 hours on
+                            business days.
                           </p>
                         </div>
                       </div>
@@ -151,7 +209,9 @@ export default function Contact() {
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-lg font-bold mb-1 text-white group-hover:text-teal-300 transition-colors duration-300">Global Reach</h4>
+                          <h4 className="text-lg font-bold mb-1 text-white group-hover:text-teal-300 transition-colors duration-300">
+                            Global Reach
+                          </h4>
                           <p className="text-[var(--body-text)]">
                             We work with clients worldwide across different time
                             zones.
@@ -170,7 +230,8 @@ export default function Contact() {
                             Personalized Approach
                           </h4>
                           <p className="text-[var(--body-text)]">
-                            We tailor our solutions to your specific needs and goals.
+                            We tailor our solutions to your specific needs and
+                            goals.
                           </p>
                         </div>
                       </div>
@@ -180,7 +241,9 @@ export default function Contact() {
                     <div className="p-6 bg-gradient-to-br from-[var(--section-bg)] to-teal-900/20 rounded-xl border border-teal-500/20 relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent"></div>
                       <div className="relative z-10">
-                        <h3 className="text-xl font-bold mb-4 text-teal-300">Our Office</h3>
+                        <h3 className="text-xl font-bold mb-4 text-teal-300">
+                          Our Office
+                        </h3>
                         <p className="text-[var(--body-text)] mb-4">
                           123 Tech Plaza, Suite 400
                           <br />
@@ -223,7 +286,9 @@ export default function Contact() {
                         <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-500/20 mx-auto mb-6 flex items-center justify-center border border-teal-500/30">
                           <CheckCircle className="w-10 h-10 text-teal-300" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-teal-300">Thank You!</h3>
+                        <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-teal-300">
+                          Thank You!
+                        </h3>
                         <p className="text-[var(--body-text)] max-w-md mx-auto mb-6">
                           Your message has been received. We'll get back to you
                           within 24 hours to discuss your project in detail.
@@ -254,8 +319,7 @@ export default function Contact() {
                               htmlFor="name"
                               className="block text-[var(--headings-text)] mb-2 font-medium"
                             >
-                              Full Name{" "}
-                              <span className="text-teal-400">*</span>
+                              Full Name <span className="text-teal-400">*</span>
                             </label>
                             <input
                               type="text"
@@ -339,14 +403,18 @@ export default function Contact() {
                             <option value="Cloud Development">
                               Cloud Development
                             </option>
-                            <option value="Web Development">Web Development</option>
+                            <option value="Web Development">
+                              Web Development
+                            </option>
                             <option value="Mobile Development">
                               Mobile Development
                             </option>
                             <option value="Data Engineering">
                               Data Engineering
                             </option>
-                            <option value="Product Design">Product Design</option>
+                            <option value="Product Design">
+                              Product Design
+                            </option>
                             <option value="Other">Other</option>
                           </select>
                         </div>
@@ -394,7 +462,9 @@ export default function Contact() {
                           type="submit"
                           disabled={formState.loading}
                           className={`w-full flex items-center justify-center px-6 py-4 rounded-lg font-medium text-white bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 focus:ring-4 focus:ring-teal-500/25 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-500/25 ${
-                            formState.loading ? "opacity-70 cursor-not-allowed scale-100" : ""
+                            formState.loading
+                              ? "opacity-70 cursor-not-allowed scale-100"
+                              : ""
                           }`}
                         >
                           {formState.loading ? (
