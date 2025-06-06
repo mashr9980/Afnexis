@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.afnexis.com
+
+# Sitemaps
+Sitemap: https://www.afnexis.com/sitemap.xml
