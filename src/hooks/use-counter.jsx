@@ -17,10 +17,10 @@ export function useCounter({
     // Reset count when visibility changes
     setCount(start);
 
-    // Add delay before starting the counter
-    const delayTimeout = setTimeout(() => {
+    let animationFrame;
+
+    const startCounter = () => {
       let startTime;
-      let animationFrame;
 
       const step = (timestamp) => {
         if (!startTime) startTime = timestamp;
@@ -38,14 +38,14 @@ export function useCounter({
       };
 
       animationFrame = requestAnimationFrame(step);
+    };
 
-      return () => {
-        cancelAnimationFrame(animationFrame);
-        clearTimeout(delayTimeout);
-      };
-    }, delay);
+    const delayTimeout = setTimeout(startCounter, delay);
 
-    return () => clearTimeout(delayTimeout);
+    return () => {
+      clearTimeout(delayTimeout);
+      cancelAnimationFrame(animationFrame);
+    };
   }, [end, start, duration, delay, isVisible]);
 
   return count;
