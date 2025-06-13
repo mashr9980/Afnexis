@@ -249,13 +249,13 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <TeamMember
-              name="Alex Chen"
-              position="Chief Executive Officer"
-              bio="Former AI research lead with 15+ years in tech leadership, driving innovation and strategic growth."
-              image="/assets/member-6.jpg"
+              name="Muhammad Aashir"
+              position="CEO and Head of AI"
+              bio="Former AI research lead with 8+ years in tech leadership, driving innovation and strategic growth."
+              image="/assets/ashir image.png"
             />
             <TeamMember
-              name="Sarah Johnson"
+              name="Raza Fayyaz"
               position="Chief Technology Officer"
               bio="Cloud architecture expert who previously led development teams at major tech companies."
               image="/assets/member-1.jpg"
@@ -273,7 +273,7 @@ export default function AboutPage() {
               image="/assets/member-3.jpg"
             />
             <TeamMember
-              name="David Kim"
+              name="Fawad Raza"
               position="Head of Product Design"
               bio="Award-winning UX designer focused on creating intuitive, engaging user experiences."
               image="/assets/member-4.jpg"
