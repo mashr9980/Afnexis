@@ -249,7 +249,7 @@ export default function AboutPage() {
             variants={staggerContainer}
           >
             <TeamMember
-              name="Muhammad Aashir"
+              name="Muhammad Aashir Tariq"
               position="CEO and Head of AI"
               bio="Former AI research lead with 8+ years in tech leadership, driving innovation and strategic growth."
               image="/assets/ashir image.png"
