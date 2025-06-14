@@ -258,7 +258,7 @@ export default function AboutPage() {
               name="Raza Fayyaz"
               position="Chief Technology Officer"
               bio="Cloud architecture expert who previously led development teams at major tech companies."
-              image="/assets/member-1.jpg"
+              image="/assets/raza.jpg"
             />
             <TeamMember
               name="Michael Rodriguez"
