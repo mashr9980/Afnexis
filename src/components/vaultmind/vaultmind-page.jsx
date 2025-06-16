@@ -70,12 +70,12 @@ export default function VaultMindPage() {
               Your Data Stays Yours. Your AI Stays Private. The world's first 100% offline AI knowledge base.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
+              <Link href="https://vaultmind.afnexis.com/">
                 <Button size="lg" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-medium rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105">
                   Start Free Trial
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="https://vaultmind.afnexis.com/">
                 <Button variant="outline" size="lg" className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25">
                   Watch Demo
                 </Button>
@@ -187,12 +187,12 @@ export default function VaultMindPage() {
               Join hundreds of organizations that trust VaultMind to analyze their sensitive documents without compromising security.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact">
+              <Link href="https://vaultmind.afnexis.com/">
                 <Button size="lg" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-medium rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105">
                   Start Your Free Trial
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="https://vaultmind.afnexis.com/">
                 <Button variant="outline" size="lg" className="border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white rounded-xl px-8 py-6 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25">
                   Schedule a Demo
                 </Button>
