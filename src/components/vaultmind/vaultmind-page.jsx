@@ -200,12 +200,6 @@ export default function VaultMindPage() {
             </div>
           </div>
         </section>
-
-        <section className="container-wrapper py-8 text-center">
-          <p className="text-text text-sm">
-            VaultMind is a trademark of AFNEXIS. © {new Date().getFullYear()} Afnexis.
-          </p>
-        </section>
       </div>
     </main>
   );
