@@ -43,6 +43,7 @@ export function Navigation() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "VaultMind", href: "/vaultmind" },
     // { name: "Services", href: "#", subItems: services },
     { name: "About Us ", href: "/about" },
     { name: "Career", href: "/career" },
