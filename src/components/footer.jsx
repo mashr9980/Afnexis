@@ -243,7 +243,7 @@ const Footer = () => {
               </li>
               <li className="text-[var(--body-text)] flex items-start">
                 <Phone className="w-5 h-5 mr-3 mt-0.5 text-[var(--primary-accent)]" />{" "}
-                +1 (555) 123-4567
+                +1 (646) 379-7856
               </li>
               <li className="text-[var(--body-text)] flex items-start">
                 <svg
