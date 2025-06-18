@@ -60,7 +60,7 @@ export default function AiCodePlatform() {
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-4">
           <span className="text-primary font-fira-code text-sm md:text-base font-medium tracking-wider">
-            CODE PLATFORM
+            VAULTMIND
           </span>
         </motion.div>
 
@@ -68,101 +68,31 @@ export default function AiCodePlatform() {
           variants={itemVariants}
           className="text-3xl md:text-5xl font-bold max-w-2xl mb-16"
         >
-          Extraordinary AI intelligence that can analyze errors and provide
-          suggestion codes
+          Keep your data private with the first 100% offline AI knowledge base
         </motion.h2>
 
-        {/* Code Editor */}
+        {/* Feature List */}
         <motion.div
-          variants={codeEditorVariants}
-          className="bg-[#0D1117] rounded-lg overflow-hidden border border-gray-800 shadow-2xl mb-16 max-w-4xl mx-auto"
+          variants={itemVariants}
+          className="mb-16 max-w-3xl mx-auto"
         >
-          {/* Editor Header */}
-          <div className="bg-[#161B22] p-2 flex items-center">
-            <div className="flex space-x-2 ml-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <div className="flex space-x-4 ml-8 text-xs text-gray-400">
-              <span className="opacity-50">module.py</span>
-              <span className="opacity-50">addresses.js</span>
-              <span className="opacity-50">sentiments.ts</span>
-            </div>
-          </div>
-
-          {/* Code Content */}
-          <div className="p-6 font-fira-code text-sm overflow-hidden">
-            <div className="text-gray-400">import datetime</div>
-            <div className="mt-4">
-              <span className="text-[#FF79C6]">def</span>{" "}
-              <span className="text-primary">parse_expenses</span>
-              <span className="text-[#F8F8F2]">(</span>
-              <span className="text-[#FFB86C]">expenses_string</span>
-              <span className="text-[#F8F8F2]">):</span>
-            </div>
-            <div className="ml-4 text-gray-300">
-              <div className="mt-2">
-                """Parse the list of expenses and return the list of triples
-                (date, amount, currency)."""
-              </div>
-              <div className="mt-2">expenses = []</div>
-              <div className="mt-2">
-                for line in expenses_string.strip().split('\n'):
-              </div>
-              <div className="ml-4 mt-1">
-                date, value, currency = line.split(' ')
-              </div>
-              <div className="ml-4 mt-1">
-                expenses.append((date, float(value), currency))
-              </div>
-              <div className="mt-2">return expenses</div>
-            </div>
-
-            <div className="mt-6">
-              <span className="text-gray-400">expenses_data = """</span>
-              <div className="ml-4 text-gray-300">
-                <div>2023-01-01 24.51 USD</div>
-                <div>2023-01-02 34.18 EUR</div>
-                <div>2023-01-02 -15.72 USD</div>
-              </div>
-              <span className="text-gray-400">"""</span>
-            </div>
-
-            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-[#1E2430] p-4 rounded-lg border border-gray-700 w-[280px]">
-              <div className="flex items-center mb-2">
-                <div className="w-4 h-4 rounded-full bg-primary-foreground mr-2"></div>
-                <span className="text-xs text-gray-300">Issue</span>
-              </div>
-              <div className="text-xs text-gray-400 mb-4">
-                The code assumes that the datetime module is imported. The test
-                cases will fail because the date format is not properly handled.
-              </div>
-              <div className="flex items-center mb-2">
-                <div className="w-4 h-4 rounded-full bg-primary-foreground mr-2"></div>
-                <span className="text-xs text-gray-300">
-                  Analysis and suggestions
-                </span>
-              </div>
-              <div className="bg-[#0A0A0F] border border-primary text-primary text-xs p-2 rounded">
-                Use datetime.strptime() to parse the date strings
-              </div>
-            </div>
-          </div>
+          <ul className="list-disc pl-5 space-y-2 text-gray-300">
+            <li>100% offline operation on your own infrastructure</li>
+            <li>Lightning-fast responses without network latency</li>
+            <li>Enterprise-grade security and full data control</li>
+          </ul>
         </motion.div>
 
         {/* Footer */}
         <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold mb-2">Coding Tools</h3>
+          <h3 className="text-xl font-bold mb-2">VaultMind</h3>
           <p className="text-gray-400 mb-6">
-            Our AI-powered coding tools enhance your development workflow by
-            providing real-time error detection, intelligent code suggestions,
-            and seamless integration with popular IDEs. Boost productivity and
-            write cleaner, more efficient code with advanced analytics and
-            automated debugging.
+            VaultMind turns your sensitive documents into an intelligent knowledge
+            base that never touches the cloud. Enjoy lightning-fast answers and
+            complete control over your data with enterprise‑grade security.
           </p>
           <Link
-            href="/portfolio"
+            href="/vaultmind"
             className="inline-flex items-center text-primary font-medium hover:underline"
           >
             LEARN MORE <ArrowRight className="ml-2 size-4" />
